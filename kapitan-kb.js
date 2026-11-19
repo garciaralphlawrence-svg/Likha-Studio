@@ -10,7 +10,7 @@
 
   // first entry = overview
   add(['what is likha studio', 'who are you', 'about likha', 'what do you do', 'ano ang likha', 'ano ginagawa nyo', 'services', 'what services do you offer', 'anong serbisyo', 'what can you build'],
-    '**Likha Studio** builds:\n- **Websites & web apps** (business sites, event pages, booking forms, portals)\n- **Business systems** (attendance, documents, KPIs, QR feedback)\n- **Work automation** (Excel, receipts, email reports, bulk PDFs)\n- **Dashboards & data** (reports, forecasting)\n- **Kapitan chat assistants**\n[See all services](' + home + '#services)');
+    '**Likha Studio** builds:\n- **Websites & web apps** (business sites, event pages, booking forms, portals)\n- **Business systems** (attendance, documents, KPIs, QR feedback)\n- **Work automation** (Excel, receipts, email reports, bulk PDFs)\n- **Dashboards & data** (reports, forecasting)\n- **Chat assistants (chatbots)** with your own name and branding\n[See all services](' + home + '#services)');
 
   add(['how much', 'price', 'pricing', 'magkano', 'magkano website', 'how much is a website', 'cost', 'rates', 'packages', 'presyo', 'quotation', 'quote', 'budget'],
     'Every project is quoted based on what you need, and the quote is **free**. Tell Ralph what you want to build in the [contact form](' + home + '#contact) or email **' + EMAIL + '**.');
@@ -36,8 +36,11 @@
   add(['dashboard', 'excel', 'data analysis', 'analytics', 'reports', 'spreadsheet', 'forecast', 'prediction', 'charts'],
     '**Dashboards & data:** sales, school and KPI dashboards, forecasting, survey analysis and quality charts. Try [AI Analytics Studio](' + G + 'AI-Analytics-Studio/) — upload an Excel file and see.');
 
-  add(['kapitan', 'chatbot', 'ai assistant', 'what is kapitan', 'chat bot', 'ai chat', 'monthly ai fee', 'may bayad ba ang ai', 'do i need to pay for ai'],
-    "I'm **Kapitan** 👋 an assistant that learns a business's prices, schedule, location and contacts, then answers customers instantly in English, Filipino or Taglish, 24/7. I only answer questions about the website I'm on, and no AI subscription is needed.");
+  add(['chatbot', 'chat assistant', 'ai assistant', 'chat bot', 'ai chat', 'can you make a chatbot', 'own chatbot', 'chatbot for my business', 'monthly ai fee', 'may bayad ba ang ai', 'do i need to pay for ai'],
+    'Yes! Likha builds a **chat assistant (chatbot)** for your business, with **your own name and branding**. It learns your prices, schedule, location and contacts, and answers customers 24/7 in English, Filipino or Taglish, only about your business.');
+
+  add(['kapitan', 'what is kapitan', 'who are you kapitan', 'are you a bot'],
+    "I'm **Kapitan** 👋 Likha Studio's own assistant. I answer questions about Likha Studio. Likha can build a chat assistant like me for your business, with your own name.");
 
   add(['tools', 'demo', 'try', 'ready made tools', 'sample', 'can i try'],
     'Try these now:\n- [Resibo Maker](' + G + 'AI-Analytics-Studio/receipts/) — receipts with VAT\n- [AI Analytics Studio](' + G + 'AI-Analytics-Studio/) — Excel to dashboard\n- [School Suite demo](' + home + 'demo/school.html) — attendance kiosk\n- [SPC Studio](' + G + 'SPC-Studio/) — quality charts\n- [CareSight](' + G + 'CareSight/) — forecasting');

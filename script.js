@@ -22,7 +22,7 @@ const TOOLS = [
     desc: 'Control charts and process-capability reports, explained in plain English.' },
   { img: 'caresight', tag: 'Data · Forecasting', name: 'CareSight', url: G + 'CareSight/',
     desc: 'Predicts patient readmissions and missed appointments, and forecasts admissions.' },
-  { kapitan: true, tag: 'AI · Chat assistant', name: 'Kapitan', desc: 'Ask it anything about Likha Studio. It only answers questions about this website.' },
+  { kapitan: true, tag: 'AI · Chat assistant', name: 'Chat assistant demo', desc: 'Try the assistant on this site. Ask it about Likha Studio. I can build one like it for your business, with your own name.' },
 ];
 
 // Projects, most important first. One short line each.
@@ -136,8 +136,8 @@ $('#faqList').innerHTML = FAQ.map(([q, a], i) => `<details class="reveal"${i ===
   if (CONTACT.whatsapp) items.push(['https://wa.me/' + CONTACT.whatsapp, 'fa-brands fa-whatsapp', 'WhatsApp', '+' + CONTACT.whatsapp]);
   if (CONTACT.phone) items.push(['tel:' + CONTACT.phone.replace(/[^\d+]/g, ''), 'fa-solid fa-phone', 'Call / Viber', CONTACT.phone]);
   items.push([CONTACT.linkedin, 'fa-brands fa-linkedin-in', 'LinkedIn', 'Ralph Garcia']);
-  items.push(['#', 'fa-solid fa-comment-dots', 'Ask Kapitan', 'Instant answers, 24/7']);
-  $('#cDirect').innerHTML = items.map(([href, ic, label, val]) => `<a href="${esc(href)}"${/^https?:/.test(href) ? ' target="_blank" rel="noopener"' : ''}${label === 'Ask Kapitan' ? ' data-kapitan' : ''}><span class="ci"><i class="${ic}"></i></span><span><small>${label}</small><b>${esc(val)}</b></span></a>`).join('');
+  items.push(['#', 'fa-solid fa-comment-dots', 'Chat assistant', 'Instant answers, 24/7']);
+  $('#cDirect').innerHTML = items.map(([href, ic, label, val]) => `<a href="${esc(href)}"${/^https?:/.test(href) ? ' target="_blank" rel="noopener"' : ''}${label === 'Chat assistant' ? ' data-kapitan' : ''}><span class="ci"><i class="${ic}"></i></span><span><small>${label}</small><b>${esc(val)}</b></span></a>`).join('');
   $$('[data-contact="linkedin"]').forEach(a => a.href = CONTACT.linkedin);
 })();
 $('#cForm').addEventListener('submit', e => {
