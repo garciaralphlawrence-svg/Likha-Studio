@@ -2,54 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://garciaralphlawrence-svg.github.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://garciaralphlawrence-svg.github.io; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Likha Studio — Websites, Systems & AI Assistants</title>
-  <meta name="description" content="Likha Studio builds websites, school and business systems, and Kapitan AI chat assistants for Filipino and US businesses. See 10 live projects and try the demos.">
-  <meta property="og:title" content="Likha Studio — Websites, Systems & AI Assistants">
-  <meta property="og:description" content="Websites that sell, systems that save hours, and an AI assistant that answers your customers 24/7.">
+  <title>Likha Studio — Websites, Systems, Automation & AI</title>
+  <meta name="description" content="Likha Studio builds websites, business systems, work automation, dashboards and Kapitan chat assistants. See a hospital quality system, ready-made tools and 10 live projects.">
+  <meta property="og:title" content="Likha Studio — Websites, Systems, Automation & AI">
+  <meta property="og:description" content="Websites, business systems, work automation, dashboards and an assistant that answers your customers 24/7.">
   <meta property="og:image" content="assets/og.jpg">
-  <meta name="theme-color" content="#08090d">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="case.css">
 </head>
 <body>
-  <!-- intro -->
-  <div class="loader" aria-hidden="true">
-    <div class="loader-mark">
-      <svg class="sun" viewBox="0 0 100 100"><use href="#sunmark"/></svg>
-      <div class="loader-word"><span>L</span><span>i</span><span>k</span><span>h</span><span>a</span></div>
-    </div>
-    <div class="loader-panel"></div>
-  </div>
-
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <linearGradient id="sunGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd166"/><stop offset=".55" stop-color="#ff9f43"/><stop offset="1" stop-color="#ff5d5d"/></linearGradient>
-      <symbol id="sunmark" viewBox="0 0 100 100">
-        <g fill="url(#sunGrad)">
-          <circle cx="50" cy="50" r="17"/>
-          <g id="ray"><path d="M50 4 L55 26 L50 30 L45 26 Z"/></g>
-          <use href="#ray" transform="rotate(45 50 50)"/><use href="#ray" transform="rotate(90 50 50)"/><use href="#ray" transform="rotate(135 50 50)"/>
-          <use href="#ray" transform="rotate(180 50 50)"/><use href="#ray" transform="rotate(225 50 50)"/><use href="#ray" transform="rotate(270 50 50)"/><use href="#ray" transform="rotate(315 50 50)"/>
-        </g>
-      </symbol>
-    </defs>
-  </svg>
-
   <div class="progress" id="progress" aria-hidden="true"></div>
 
   <header class="nav" id="nav">
     <div class="wrap nav-inner">
-      <a href="#top" class="logo" aria-label="Likha Studio home"><svg class="logo-sun" viewBox="0 0 100 100"><use href="#sunmark"/></svg><span>Likha<em>Studio</em></span></a>
+      <a href="#top" class="logo" aria-label="Likha Studio home"><img src="assets/logo.svg" alt="" width="28" height="28"><span>Likha <em>Studio</em></span></a>
       <nav class="nav-links" id="navLinks">
-        <a href="#work">Work</a><a href="#hospital">Case study</a><a href="#services">Services</a><a href="#demos">Live demos</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a>
+        <a href="#services">Services</a><a href="#hospital">Hospital system</a><a href="#tools">Tools</a><a href="#work">Projects</a><a href="#about">About</a><a href="#faq">FAQ</a>
       </nav>
-      <a href="#contact" class="btn btn-sun btn-sm nav-cta">Get a free quote</a>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Get a free quote</a>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
@@ -57,352 +35,198 @@
   <main id="top">
     <!-- ================= HERO ================= -->
     <section class="hero">
-      <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
-      <div class="grid-bg" aria-hidden="true"></div>
-      <svg class="hero-sun" viewBox="0 0 100 100" aria-hidden="true"><use href="#sunmark"/></svg>
-
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="dot"></span>Web · Systems · AI assistants — for PH &amp; US businesses</p>
-          <h1 class="hero-title">
-            <span class="line"><span>Websites &amp; systems</span></span>
-            <span class="line"><span>that help your</span></span>
-            <span class="line"><span>business <em class="grad">grow.</em></span></span>
-          </h1>
-          <p class="hero-sub">Built for <span class="rotator" id="rotator"><b>schools</b><b>clinics</b><b>performers</b><b>restaurants</b><b>travel agencies</b><b>small businesses</b></span><br>Beautiful sites, smart systems, and <strong>Kapitan</strong>, an AI assistant that answers your customers 24/7.</p>
+          <p class="pill"><span class="dot"></span> Available for new projects · PH &amp; US</p>
+          <h1>I build <span class="rotator" id="rotator"><b>websites</b><b>business systems</b><b>work automation</b><b>dashboards</b><b>AI assistants</b></span><br>that save you time.</h1>
+          <p class="lead">From a simple website to a full hospital system: I turn slow, manual work into tools that run on their own. Everything shown here is live and in use.</p>
           <div class="hero-btns">
-            <a href="#work" class="btn btn-sun">See live projects <i class="fa-solid fa-arrow-down"></i></a>
-            <a href="#demos" class="btn btn-ghost"><i class="fa-solid fa-play"></i> Try a demo</a>
+            <a href="#services" class="btn btn-primary">See what I can do <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="#contact" class="btn btn-outline">Get a free quote</a>
           </div>
-          <div class="hero-proof">
-            <div><b data-count="10">10</b><span>live projects<br>you can open now</span></div>
-            <div><b>24/7</b><span>Kapitan AI on<br>every site</span></div>
-            <div><b data-count="0" data-prefix="₱">₱0</b><span>monthly hosting<br>on most sites</span></div>
-          </div>
+          <ul class="proof">
+            <li><b data-count="10">10</b><span>live projects</span></li>
+            <li><b>ISO 9001</b><span>hospital system in daily use</span></li>
+            <li><b data-count="5">5</b><span>ready-made tools to try</span></li>
+          </ul>
         </div>
 
-        <div class="hero-stage" id="stage" aria-label="Recent projects">
-          <div class="stack" id="stack"></div>
-          <div class="float-tag t1"><i class="fa-solid fa-mobile-screen"></i> Mobile-ready</div>
-          <div class="float-tag t2"><i class="fa-solid fa-bolt"></i> Loads fast</div>
-          <div class="float-tag t3"><span class="mini-orb"></span> Kapitan AI built in</div>
+        <!-- animated automation flow: input → automation → results -->
+        <div class="flow" aria-label="Example: a spreadsheet becomes a dashboard, receipts and an email report automatically">
+          <div class="flow-card in-card">
+            <i class="fa-solid fa-file-excel"></i>
+            <div><b>sales-november.xlsx</b><small>2,418 rows · messy data</small></div>
+          </div>
+          <div class="flow-line" aria-hidden="true"><span></span></div>
+          <div class="flow-core">
+            <img src="assets/logo.svg" alt="" width="34" height="34">
+            <div><b>Automation</b><small>cleans, computes and sends</small></div>
+            <div class="spinner" aria-hidden="true"></div>
+          </div>
+          <div class="flow-line split" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="flow-out">
+            <div class="flow-card o1"><i class="fa-solid fa-chart-column"></i><div><b>Dashboard</b><small>updated live</small></div></div>
+            <div class="flow-card o2"><i class="fa-solid fa-receipt"></i><div><b>Receipts</b><small>VAT computed</small></div></div>
+            <div class="flow-card o3"><i class="fa-solid fa-envelope-open-text"></i><div><b>Email report</b><small>sent every Monday</small></div></div>
+          </div>
         </div>
       </div>
-      <a href="#trust" class="scroll-cue" aria-label="Scroll down"><span></span></a>
     </section>
 
-    <!-- ================= TRUST STRIP ================= -->
-    <div class="marquee" id="trust" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Websites</span><i>✦</i><span>School systems</span><i>✦</i><span>AI chat assistants</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Attendance kiosks</span><i>✦</i><span>Event &amp; ticket pages</span><i>✦</i><span>Excel automation</span><i>✦</i><span>Booking portals</span><i>✦</i>
-        <span>Websites</span><i>✦</i><span>School systems</span><i>✦</i><span>AI chat assistants</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Attendance kiosks</span><i>✦</i><span>Event &amp; ticket pages</span><i>✦</i><span>Excel automation</span><i>✦</i><span>Booking portals</span><i>✦</i>
-      </div>
-    </div>
+    <div class="marquee" aria-hidden="true"><div class="marquee-track">
+      <span>Websites</span><span>Web apps</span><span>Attendance systems</span><span>Document management</span><span>KPI tracking</span><span>Excel automation</span><span>Receipts &amp; invoices</span><span>Email reports</span><span>Dashboards</span><span>Forecasting</span><span>QR feedback</span><span>Chat assistants</span><span>Booking systems</span>
+      <span>Websites</span><span>Web apps</span><span>Attendance systems</span><span>Document management</span><span>KPI tracking</span><span>Excel automation</span><span>Receipts &amp; invoices</span><span>Email reports</span><span>Dashboards</span><span>Forecasting</span><span>QR feedback</span><span>Chat assistants</span><span>Booking systems</span>
+    </div></div>
 
-    <!-- ================= WORK ================= -->
-    <section class="section" id="work">
+    <!-- ================= SERVICES ================= -->
+    <section class="section" id="services">
       <div class="wrap">
         <div class="sec-head reveal">
-          <span class="kicker">01 — Selected work</span>
-          <h2>Real projects. <em>Live right now.</em></h2>
-          <p>Every project below is online. You can open any of them on your phone right now.</p>
+          <span class="kicker">Services</span>
+          <h2>Everything I can build for you</h2>
+          <p>If your team does it by hand every week, it can probably be automated. Here is what I offer.</p>
         </div>
-        <div class="filters reveal" role="tablist" aria-label="Filter projects">
-          <button class="on" data-filter="all">All</button><button data-filter="web">Websites</button><button data-filter="sys">Systems</button><button data-filter="ai">AI &amp; data</button>
+        <div class="svc-grid">
+          <article class="svc reveal">
+            <div class="svc-ico"><i class="fa-solid fa-display"></i></div>
+            <h3>Websites &amp; web apps</h3>
+            <p>Fast, mobile-friendly sites that make people trust you.</p>
+            <ul><li>Business and personal websites</li><li>Event and ticket pages</li><li>Booking and reservation forms</li><li>Online menus and catalogs</li><li>Client and student portals</li></ul>
+          </article>
+          <article class="svc reveal">
+            <div class="svc-ico"><i class="fa-solid fa-building-columns"></i></div>
+            <h3>Business systems</h3>
+            <p>Replace paper and scattered files with one system.</p>
+            <ul><li>Attendance with PIN kiosk</li><li>Document management (like K-Hub)</li><li>KPI and performance tracking</li><li>QR customer feedback</li><li>Records, inventory and requests</li></ul>
+          </article>
+          <article class="svc reveal">
+            <div class="svc-ico"><i class="fa-solid fa-gears"></i></div>
+            <h3>Work automation</h3>
+            <p>Let the computer do the repetitive work.</p>
+            <ul><li>Excel and Google Sheets automation</li><li>Receipts and invoices (like Resibo Maker)</li><li>Automatic email reports</li><li>Certificates, IDs and PDFs in bulk</li><li>Data entry, cleaning and file sorting</li></ul>
+          </article>
+          <article class="svc reveal">
+            <div class="svc-ico"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Data &amp; dashboards</h3>
+            <p>See your numbers clearly and plan ahead.</p>
+            <ul><li>Sales, school and KPI dashboards</li><li>Forecasting and predictions</li><li>Survey and feedback analysis</li><li>Quality control charts</li><li>Monthly reports for management</li></ul>
+          </article>
+          <article class="svc reveal">
+            <div class="svc-ico"><i class="fa-solid fa-comments"></i></div>
+            <h3>Kapitan chat assistant</h3>
+            <p>Answers your customers 24/7, in English or Taglish.</p>
+            <ul><li>Prices, schedules and FAQs</li><li>Only answers about your business</li><li>Works on any website</li><li>No AI subscription needed</li></ul>
+          </article>
+          <article class="svc reveal">
+            <div class="svc-ico"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Support &amp; updates</h3>
+            <p>I stay with you after launch.</p>
+            <ul><li>Content and event updates</li><li>New features as you grow</li><li>Domain and hosting setup</li><li>Training for your staff</li></ul>
+          </article>
         </div>
-        <div class="work-grid" id="workGrid"></div>
       </div>
     </section>
 
     <!-- ================= HOSPITAL CASE STUDY ================= -->
-    <section class="section case" id="hospital">
-      <div class="wrap">
-        <div class="case-head">
-          <div class="sec-head reveal">
-            <span class="kicker">Featured case study · Healthcare</span>
-            <h2>A hospital's quality office, <em>fully digital.</em></h2>
-            <p>As the in-house developer at UERM Medical Center, I built the Quality Management System its Quality Assurance Office uses every day to meet ISO 9001. It replaced paper forms, shared folders and spreadsheets. Here are three highlights.</p>
-          </div>
-          <div class="case-facts reveal">
-            <div><b>ISO 9001</b><span>quality standard it supports</span></div>
-            <div><b>1 login</b><span>for every hospital employee</span></div>
-            <div><b>Daily use</b><span>across hospital departments</span></div>
-          </div>
-        </div>
-
-        <article class="hl reveal">
-          <div class="hl-media">
-            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>Customer Experience System</span></div><img src="assets/hospital/cx.webp" alt="Customer Experience System sign-in page" loading="lazy" width="1200" height="750"></div>
-            <div class="qr-card" aria-hidden="true">
-              <div class="qr" id="qrArt"></div>
-              <b>Scan to share your experience</b>
-              <div class="qr-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-              <span class="scan-line"></span>
-            </div>
-          </div>
-          <div class="hl-copy">
-            <span class="hl-num">01</span>
-            <span class="hl-tag"><i class="fa-solid fa-qrcode"></i> Customer Experience</span>
-            <h3>Patients scan a QR code to give feedback</h3>
-            <p>QR codes are posted around the hospital. Patients and visitors scan one with their own phone, rate their experience and leave a comment. They don't need an app or an account.</p>
-            <p>Every concern goes to the right office, gets a named owner, and is tracked step by step until it is resolved.</p>
-            <ul class="hl-wins">
-              <li><i class="fa-solid fa-circle-check"></i>Feedback in under a minute, from any phone</li>
-              <li><i class="fa-solid fa-circle-check"></i>No complaint is lost: each one is tracked to closure</li>
-              <li><i class="fa-solid fa-circle-check"></i>Satisfaction scores and trends update automatically</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="hl flip reveal">
-          <div class="hl-media">
-            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>Knowledge Hub</span></div><img src="assets/hospital/khub.webp" alt="Knowledge Hub landing page" loading="lazy" width="1200" height="750"></div>
-            <div class="doc-stack" aria-hidden="true">
-              <div class="doc"><i class="fa-solid fa-file-pdf"></i><span><b>Infection Control Policy</b><small>v4 · Approved</small></span></div>
-              <div class="doc"><i class="fa-solid fa-file-word"></i><span><b>Patient Admission SOP</b><small>v2 · Approved</small></span></div>
-              <div class="doc"><i class="fa-solid fa-file-excel"></i><span><b>Records Retention Form</b><small>v1 · For review</small></span></div>
-            </div>
-          </div>
-          <div class="hl-copy">
-            <span class="hl-num">02</span>
-            <span class="hl-tag"><i class="fa-solid fa-book"></i> Knowledge Hub (K-Hub)</span>
-            <h3>Every document in one central place</h3>
-            <p>All policies, procedures and forms live in one searchable library, organized by department. Only the latest approved version is shown, and older versions are kept as history.</p>
-            <p>Staff confirm they have read a document, owners get a reminder when it is due for review, and one K-Hub account signs employees in to every other system.</p>
-            <ul class="hl-wins">
-              <li><i class="fa-solid fa-circle-check"></i>Find any document in seconds</li>
-              <li><i class="fa-solid fa-circle-check"></i>Always the current, approved version</li>
-              <li><i class="fa-solid fa-circle-check"></i>See exactly who has read and acknowledged it</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="hl reveal">
-          <div class="hl-media">
-            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>KPI Generator</span></div><img src="assets/hospital/kpi.webp" alt="KPI Generator landing page" loading="lazy" width="1200" height="750"></div>
-            <div class="kpi-card" aria-hidden="true">
-              <div class="kpi-row"><span>Patient wait time</span><em class="ok">Achieved</em></div>
-              <div class="kpi-row"><span>Lab turnaround</span><em class="ok">Achieved</em></div>
-              <div class="kpi-row"><span>Discharge before noon</span><em class="no">Action plan</em></div>
-              <div class="kpi-heat"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-          </div>
-          <div class="hl-copy">
-            <span class="hl-num">03</span>
-            <span class="hl-tag"><i class="fa-solid fa-chart-column"></i> KPI Generator</span>
-            <h3>Measuring every department's performance</h3>
-            <p>Each department sets its key performance indicators (KPIs) and enters results every month. The system marks each one <b>Achieved</b> or <b>Not achieved</b> automatically.</p>
-            <p>A missed target needs an action plan, which is accepted by the department head and approved by the vice president. Management sees everything on one heatmap.</p>
-            <ul class="hl-wins">
-              <li><i class="fa-solid fa-circle-check"></i>Results are classified automatically, without manual checking</li>
-              <li><i class="fa-solid fa-circle-check"></i>Every missed target has an approved action plan</li>
-              <li><i class="fa-solid fa-circle-check"></i>One view of performance across all departments</li>
-            </ul>
-          </div>
-        </article>
-
-        <div class="case-cta reveal">
-          <p><b>The same tools can work for your school, clinic or company:</b> feedback by QR code, a central document library and KPI tracking.</p>
-          <a href="#contact" class="btn btn-sun">Talk about your system <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SERVICES ================= -->
-    <section class="section alt" id="services">
+    <section class="section tinted" id="hospital">
       <div class="wrap">
         <div class="sec-head reveal">
-          <span class="kicker">02 — What I build</span>
-          <h2>Four ways to <em>grow your business.</em></h2>
+          <span class="kicker">Featured project · Healthcare</span>
+          <h2>Hospital Quality Management System</h2>
+          <p>I built the system that UERM Medical Center's Quality Assurance Office uses every day to meet ISO 9001. It replaced paper forms, shared folders and spreadsheets. Three highlights:</p>
         </div>
-        <div class="services">
-          <article class="service reveal">
-            <span class="s-num">01</span><i class="fa-solid fa-display s-ico"></i>
-            <h3>Websites that sell</h3>
-            <p>A fast, beautiful site with motion that makes people trust you before they call. Mobile-first, connected to your own domain.</p>
-            <ul><li>Business &amp; personal brand sites</li><li>Event and ticket pages</li><li>Menus, packages, galleries</li></ul>
+        <div class="hl-grid">
+          <article class="hl reveal">
+            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>Customer Experience</span></div><img src="assets/hospital/cx.webp" alt="Customer Experience system screen" loading="lazy" width="1200" height="750"></div>
+            <div class="hl-body">
+              <span class="hl-tag"><i class="fa-solid fa-qrcode"></i> Customer Experience</span>
+              <h3>Feedback by QR code</h3>
+              <p>Patients scan a QR code with their own phone and rate their visit. No app or account needed.</p>
+              <ul><li>Every concern gets an owner</li><li>Tracked until it is resolved</li><li>Satisfaction scores update automatically</li></ul>
+            </div>
           </article>
-          <article class="service reveal">
-            <span class="s-num">02</span><i class="fa-solid fa-school s-ico"></i>
-            <h3>Business systems</h3>
-            <p>Replace paper logbooks and messy spreadsheets with a system your staff can use from day one.</p>
-            <ul><li>Attendance kiosk with PIN</li><li>Logins for admin, staff, parents</li><li>Excel import &amp; export</li></ul>
+          <article class="hl reveal">
+            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>Knowledge Hub</span></div><img src="assets/hospital/khub.webp" alt="Knowledge Hub screen" loading="lazy" width="1200" height="750"></div>
+            <div class="hl-body">
+              <span class="hl-tag"><i class="fa-solid fa-book"></i> Knowledge Hub (K-Hub)</span>
+              <h3>All documents in one place</h3>
+              <p>Every policy, procedure and form in one searchable library, organized by department.</p>
+              <ul><li>Always the latest approved version</li><li>See who has read each document</li><li>One login for all hospital systems</li></ul>
+            </div>
           </article>
-          <article class="service reveal">
-            <span class="s-num">03</span><span class="s-ico orb-ico"><span class="mini-orb"></span></span>
-            <h3>Kapitan AI assistant</h3>
-            <p>A chat assistant trained on <em>your</em> business. Answers prices, schedules and FAQs in English or Taglish, day and night.</p>
-            <ul><li>No monthly AI fees</li><li>Knows your prices &amp; contacts</li><li>Works on any website</li></ul>
-          </article>
-          <article class="service reveal">
-            <span class="s-num">04</span><i class="fa-solid fa-chart-line s-ico"></i>
-            <h3>Dashboards &amp; data</h3>
-            <p>Turn your Excel files into clear dashboards, forecasts and reports you can show your boss or board.</p>
-            <ul><li>Sales &amp; KPI dashboards</li><li>Forecasts and trends</li><li>Quality &amp; process charts</li></ul>
+          <article class="hl reveal">
+            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>KPI Generator</span></div><img src="assets/hospital/kpi.webp" alt="KPI Generator screen" loading="lazy" width="1200" height="750"></div>
+            <div class="hl-body">
+              <span class="hl-tag"><i class="fa-solid fa-chart-column"></i> KPI Generator</span>
+              <h3>Measuring performance</h3>
+              <p>Departments enter monthly results, and each target is marked Achieved or Not achieved automatically.</p>
+              <ul><li>Missed targets need an action plan</li><li>Approved by the head and VP</li><li>One heatmap for management</li></ul>
+            </div>
           </article>
         </div>
+        <p class="note reveal"><i class="fa-solid fa-lock"></i> This is a private hospital system, so it is shown with screenshots only. The same tools can be built for your school, clinic or company.</p>
       </div>
     </section>
 
-    <!-- ================= LIVE DEMOS ================= -->
-    <section class="section" id="demos">
+    <!-- ================= TOOLS ================= -->
+    <section class="section" id="tools">
       <div class="wrap">
         <div class="sec-head reveal">
-          <span class="kicker">03 — Live demos</span>
-          <h2>See it working. <em>Try the live demos.</em></h2>
+          <span class="kicker">Ready-made tools</span>
+          <h2>Try my tools right now</h2>
+          <p>Working examples of automation you can use today. Open one and click around.</p>
         </div>
-        <div class="demo-tabs reveal" role="tablist">
-          <button class="on" data-tab="kiosk"><i class="fa-solid fa-id-badge"></i> Attendance kiosk</button>
-          <button data-tab="chat"><span class="mini-orb"></span> Kapitan AI chat</button>
-          <button data-tab="dash"><i class="fa-solid fa-chart-column"></i> Excel → dashboard</button>
-        </div>
-
-        <div class="demo-panels reveal">
-          <!-- kiosk -->
-          <div class="demo-panel on" data-panel="kiosk">
-            <div class="demo-copy">
-              <h3>School Suite: PIN attendance kiosk</h3>
-              <p>Teachers tap their 4-digit PIN at the entrance. The time is logged instantly, and late arrivals are flagged for the admin. No more paper logbook.</p>
-              <p class="hint"><i class="fa-solid fa-hand-pointer"></i> Try PIN <b>1234</b> (Ms. Santos) or <b>2468</b> (Mr. Reyes).</p>
-              <a class="btn btn-sun" href="demo/school.html" target="_blank" rel="noopener">Open the full School Suite demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="kiosk" id="kiosk">
-              <div class="k-top"><span class="k-school"><i class="fa-solid fa-graduation-cap"></i> Sunrise Learning Center</span><span class="k-clock" id="kClock">--:--</span></div>
-              <div class="k-screen">
-                <div class="k-msg" id="kMsg">Enter your PIN</div>
-                <div class="k-dots" id="kDots"><i></i><i></i><i></i><i></i></div>
-              </div>
-              <div class="k-pad" id="kPad"></div>
-              <ul class="k-log" id="kLog"><li class="empty">No one has timed in yet today.</li></ul>
-            </div>
-          </div>
-
-          <!-- chat -->
-          <div class="demo-panel" data-panel="chat">
-            <div class="demo-copy">
-              <h3>Kapitan answers your customers for you</h3>
-              <p>Kapitan learns your prices, schedule, location and contacts, then answers questions instantly, even at 2 AM. It understands English, Filipino and Taglish.</p>
-              <p class="hint"><i class="fa-solid fa-circle-info"></i> The Kapitan on this page knows about Likha Studio. Ask it about prices!</p>
-              <div class="btn-row">
-                <button class="btn btn-sun" id="openKapitan"><span class="mini-orb"></span> Chat with Kapitan now</button>
-                <a class="btn btn-ghost" href="https://garciaralphlawrence-svg.github.io/Comedian-Demo/kapitan.html" target="_blank" rel="noopener">See a client's Kapitan ↗</a>
-              </div>
-            </div>
-            <div class="phone">
-              <div class="phone-notch"></div>
-              <div class="chat-head"><span class="mini-orb"></span><div><b>Kapitan</b><small>Online · instant answers</small></div></div>
-              <div class="chat-body" id="chatDemo"></div>
-            </div>
-          </div>
-
-          <!-- dashboard -->
-          <div class="demo-panel" data-panel="dash">
-            <div class="demo-copy">
-              <h3>Drop in a spreadsheet, get a dashboard</h3>
-              <p>Upload your sales, enrollment or patient data and get charts, trends and plain-English insights in seconds. Your data stays in your browser.</p>
-              <div class="btn-row">
-                <button class="btn btn-ghost" id="reDash"><i class="fa-solid fa-rotate"></i> Replay</button>
-                <a class="btn btn-sun" href="https://garciaralphlawrence-svg.github.io/AI-Analytics-Studio/" target="_blank" rel="noopener">Open AI Analytics Studio ↗</a>
-              </div>
-            </div>
-            <div class="dash" id="dash">
-              <div class="d-file"><i class="fa-solid fa-file-excel"></i><span>coffee-sales-2026.xlsx</span><b id="dStatus">Reading…</b></div>
-              <div class="d-kpis">
-                <div><small>Revenue</small><b data-to="482350" data-prefix="₱">₱0</b><em class="up">▲ 18%</em></div>
-                <div><small>Orders</small><b data-to="9614">0</b><em class="up">▲ 11%</em></div>
-                <div><small>Avg. order</small><b data-to="502" data-prefix="₱">₱0</b><em class="dn">▼ 2%</em></div>
-              </div>
-              <div class="d-chart"><div class="d-bars" id="dBars"></div><svg class="d-line" viewBox="0 0 300 100" preserveAspectRatio="none"><path id="dLine" d=""/></svg></div>
-              <p class="d-insight" id="dInsight"><i class="fa-solid fa-wand-magic-sparkles"></i> <span></span></p>
-            </div>
-          </div>
-        </div>
+        <div class="tools-grid" id="toolsGrid"></div>
       </div>
     </section>
 
-    <!-- ================= PRICING ================= -->
-    <section class="section alt" id="pricing">
+    <!-- ================= PROJECTS ================= -->
+    <section class="section tinted" id="work">
       <div class="wrap">
-        <div class="sec-head center reveal">
-          <span class="kicker">04 — Simple pricing</span>
-          <h2>Clear packages. <em>No surprises.</em></h2>
-          <div class="currency" role="group" aria-label="Currency">
-            <button class="on" data-cur="php">₱ PHP</button><button data-cur="usd">$ USD</button><span class="knob"></span>
-          </div>
+        <div class="sec-head reveal">
+          <span class="kicker">Projects</span>
+          <h2>Websites and systems I've built</h2>
+          <p>Each project is online. Click any card to open it.</p>
         </div>
-        <div class="plans">
-          <article class="plan reveal">
-            <h3>Launch</h3><p class="p-for">For a personal brand or small business</p>
-            <div class="price"><small>from</small><b data-php="25,000" data-usd="500">₱25,000</b></div>
-            <ul><li>Up to 5 sections, mobile-first</li><li>Motion design &amp; animations</li><li>Your own domain connected</li><li>Free hosting setup</li><li>2 rounds of revisions</li></ul>
-            <p class="p-time"><i class="fa-regular fa-clock"></i> About 1 week</p>
-            <a href="#contact" class="btn btn-ghost" data-plan="Launch">Start with Launch</a>
-          </article>
-          <article class="plan pop reveal">
-            <span class="badge">Most popular</span>
-            <h3>Website + Kapitan</h3><p class="p-for">For businesses that get lots of questions</p>
-            <div class="price"><small>from</small><b data-php="45,000" data-usd="800">₱45,000</b></div>
-            <ul><li>Everything in Launch</li><li>Multiple pages</li><li><b>Kapitan AI</b> trained on your business</li><li>Event, menu or booking section</li><li>1 month of free updates</li></ul>
-            <p class="p-time"><i class="fa-regular fa-clock"></i> About 2 weeks</p>
-            <a href="#contact" class="btn btn-sun" data-plan="Website + Kapitan">Choose this plan</a>
-          </article>
-          <article class="plan reveal">
-            <h3>Business System</h3><p class="p-for">For schools, clinics and growing teams</p>
-            <div class="price"><small>from</small><b data-php="60,000" data-usd="1,200">₱60,000</b></div>
-            <ul><li>Logins &amp; roles (admin, staff, parents)</li><li>Attendance, records or bookings</li><li>Dashboards &amp; reports</li><li>Excel import &amp; export</li><li>Staff training + 1 month support</li></ul>
-            <p class="p-time"><i class="fa-regular fa-clock"></i> 3 to 6 weeks</p>
-            <a href="#contact" class="btn btn-ghost" data-plan="Business System">Talk about a system</a>
-          </article>
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="on" data-filter="all">All</button><button data-filter="sys">Systems</button><button data-filter="ai">Data &amp; AI</button><button data-filter="web">Websites</button>
         </div>
-        <div class="addons reveal">
-          <div><i class="fa-solid fa-screwdriver-wrench"></i><b>Care plan</b><span data-php="₱2,500/mo" data-usd="$45/mo">₱2,500/mo</span><small>updates, new events, fixes</small></div>
-          <div><span class="mini-orb"></span><b>Kapitan for your existing site</b><span data-php="₱1,500/mo" data-usd="$30/mo">₱1,500/mo</span><small>setup + keeping it up to date</small></div>
-          <div><i class="fa-solid fa-ticket"></i><b>Event / show page</b><span data-php="₱8,000" data-usd="$150">₱8,000</span><small>countdown, tickets, poster</small></div>
-          <div><i class="fa-solid fa-globe"></i><b>Domain</b><span data-php="≈ ₱900/yr" data-usd="≈ $15/yr">≈ ₱900/yr</span><small>registered in your name</small></div>
-        </div>
-        <p class="fine reveal">50% to start, 50% at launch. The website, domain and content are yours.</p>
+        <div class="work-grid" id="workGrid"></div>
       </div>
     </section>
 
     <!-- ================= PROCESS ================= -->
     <section class="section" id="process">
       <div class="wrap">
-        <div class="sec-head reveal">
-          <span class="kicker">05 — How it works</span>
-          <h2>From first chat to launch <em>in five steps.</em></h2>
-        </div>
+        <div class="sec-head center reveal"><span class="kicker">How it works</span><h2>Four simple steps</h2></div>
         <ol class="steps" id="steps">
-          <li class="reveal"><span class="st-n">1</span><div><h3>Free call</h3><p>Tell me about your business and what is slowing you down. You get a clear quote, no pressure.</p></div></li>
-          <li class="reveal"><span class="st-n">2</span><div><h3>Design preview</h3><p>Within a few days you see a working preview, not just a drawing, so you know exactly what you are getting.</p></div></li>
-          <li class="reveal"><span class="st-n">3</span><div><h3>Build &amp; revise</h3><p>I build it out and you review on your phone. Changes are included in every package.</p></div></li>
-          <li class="reveal"><span class="st-n">4</span><div><h3>Launch &amp; train</h3><p>We go live on your domain. Your team gets a walkthrough and a simple guide.</p></div></li>
-          <li class="reveal"><span class="st-n">5</span><div><h3>Grow</h3><p>Add new events, features or Kapitan answers whenever you need them.</p></div></li>
-          <span class="steps-line" aria-hidden="true"><i id="stepsFill"></i></span>
+          <li class="reveal"><span>1</span><h3>Free call</h3><p>Tell me what slows your team down. You get a clear quote.</p></li>
+          <li class="reveal"><span>2</span><h3>Preview</h3><p>See a working preview within a few days.</p></li>
+          <li class="reveal"><span>3</span><h3>Build &amp; revise</h3><p>Review it on your phone. Changes are included.</p></li>
+          <li class="reveal"><span>4</span><h3>Launch</h3><p>Go live, with a walkthrough for your team.</p></li>
         </ol>
       </div>
     </section>
 
-    <!-- ================= FOUNDER ================= -->
-    <section class="section alt" id="founder">
-      <div class="wrap founder">
-        <div class="f-photo reveal">
-          <div class="f-ring"></div><div class="f-ring r2"></div><div class="f-glow"></div>
+    <!-- ================= ABOUT ================= -->
+    <section class="section tinted" id="about">
+      <div class="wrap about">
+        <div class="about-photo reveal">
           <picture><source srcset="assets/ralph-cutout.webp" type="image/webp"><img src="assets/ralph-cutout.png" alt="Ralph Garcia, founder of Likha Studio" loading="lazy"></picture>
-          <div class="f-chip"><i class="fa-solid fa-code"></i> Designs &amp; codes every project</div>
         </div>
-        <div class="f-copy">
-          <div class="sec-head reveal"><span class="kicker">06 — Who you'll work with</span><h2>Hi, I'm <em>Ralph.</em></h2></div>
-          <p class="reveal">I'm the developer and data analyst behind Likha Studio. When you hire Likha, you talk directly to the person who designs and writes your code. No middlemen, no handoffs, no slow replies.</p>
-          <p class="reveal">I build fast, beautiful websites and practical systems for schools, healthcare teams, performers and small businesses, and I add Kapitan so your customers get answers even while you sleep.</p>
-          <div class="f-points reveal">
-            <span><i class="fa-solid fa-check"></i> Direct line to the developer</span>
-            <span><i class="fa-solid fa-check"></i> You own your site &amp; domain</span>
-            <span><i class="fa-solid fa-check"></i> English &amp; Filipino</span>
-            <span><i class="fa-solid fa-check"></i> PH &amp; US clients</span>
-          </div>
-          <div class="btn-row reveal">
-            <a class="btn btn-ghost" href="https://garciaralphlawrence-svg.github.io/Ralph-Portfolio/" target="_blank" rel="noopener"><i class="fa-solid fa-user"></i> Full portfolio</a>
-            <a class="btn btn-ghost" data-contact="linkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <div class="reveal">
+          <span class="kicker">About</span>
+          <h2>Hi, I'm Ralph.</h2>
+          <p>I'm the developer and data analyst behind Likha Studio. You work directly with me, the person who designs and writes your code, so replies are fast and nothing gets lost in a handoff.</p>
+          <ul class="checks">
+            <li><i class="fa-solid fa-check"></i> You own your site, system and data</li>
+            <li><i class="fa-solid fa-check"></i> English and Filipino</li>
+            <li><i class="fa-solid fa-check"></i> Clients in the Philippines and the US</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-outline btn-sm" href="https://garciaralphlawrence-svg.github.io/Ralph-Portfolio/" target="_blank" rel="noopener"><i class="fa-solid fa-user"></i> Full portfolio</a>
+            <a class="btn btn-outline btn-sm" data-contact="linkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
           </div>
         </div>
       </div>
@@ -411,37 +235,33 @@
     <!-- ================= FAQ ================= -->
     <section class="section" id="faq">
       <div class="wrap narrow">
-        <div class="sec-head center reveal"><span class="kicker">07 — Questions</span><h2>Good to <em>know.</em></h2></div>
+        <div class="sec-head center reveal"><span class="kicker">FAQ</span><h2>Common questions</h2></div>
         <div class="faq" id="faqList"></div>
       </div>
     </section>
 
     <!-- ================= CONTACT ================= -->
-    <section class="section contact" id="contact">
-      <div class="aurora soft" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+    <section class="section tinted" id="contact">
       <div class="wrap contact-grid">
-        <div class="c-copy">
-          <span class="kicker reveal">08 — Let's talk</span>
-          <h2 class="big-cta reveal">Let's build <em class="grad">yours.</em></h2>
-          <p class="reveal">Tell me what you need and I'll reply with ideas and a clear quote. The first call is free.</p>
-          <div class="c-direct reveal" id="cDirect"></div>
+        <div class="reveal">
+          <span class="kicker">Contact</span>
+          <h2>Let's build yours.</h2>
+          <p class="lead">Tell me what you need and I'll reply with ideas and a free quote.</p>
+          <div class="c-direct" id="cDirect"></div>
         </div>
         <form class="c-form reveal" id="cForm">
           <div class="row2">
             <label>Your name<input name="name" required autocomplete="name" placeholder="Juan dela Cruz"></label>
-            <label>Business / school<input name="biz" autocomplete="organization" placeholder="Sunrise Learning Center"></label>
+            <label>Business / school<input name="biz" autocomplete="organization" placeholder="Your business"></label>
           </div>
           <label>What do you need?
             <select name="need" id="cNeed">
-              <option>A new website</option><option>Website + Kapitan AI</option><option>A school / business system</option><option>Kapitan for my existing site</option><option>A dashboard from my data</option><option>An event / show page</option><option>Not sure yet</option>
+              <option>A website or web app</option><option>A business system</option><option>Work automation</option><option>Receipts or invoices</option><option>A dashboard or report</option><option>A Kapitan chat assistant</option><option>Not sure yet</option>
             </select>
           </label>
-          <label>Budget
-            <select name="budget"><option>Not sure yet</option><option>Under ₱25,000 / $500</option><option>₱25,000–50,000 / $500–1,000</option><option>₱50,000–100,000 / $1,000–2,000</option><option>₱100,000+ / $2,000+</option></select>
-          </label>
-          <label>Tell me a little about it<textarea name="msg" rows="4" placeholder="e.g. We have 25 teachers and still use a paper logbook…"></textarea></label>
-          <button class="btn btn-sun wide" type="submit"><i class="fa-solid fa-paper-plane"></i> Send my request</button>
-          <p class="c-note">This opens your email app with everything filled in. Prefer chat? Use the buttons on the left.</p>
+          <label>Message<textarea name="msg" rows="4" placeholder="What do you want to build or automate?"></textarea></label>
+          <button class="btn btn-primary wide" type="submit"><i class="fa-solid fa-paper-plane"></i> Send my request</button>
+          <p class="c-note">This opens your email app with your message filled in.</p>
         </form>
       </div>
     </section>
@@ -449,8 +269,7 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <a href="#top" class="logo"><svg class="logo-sun" viewBox="0 0 100 100"><use href="#sunmark"/></svg><span>Likha<em>Studio</em></span></a>
-      <p>Websites, systems &amp; AI assistants. Made in the Philippines for clients everywhere.</p>
+      <a href="#top" class="logo"><img src="assets/logo.svg" alt="" width="24" height="24"><span>Likha <em>Studio</em></span></a>
       <span>© <span id="year"></span> Likha Studio · Ralph Garcia</span>
     </div>
   </footer>

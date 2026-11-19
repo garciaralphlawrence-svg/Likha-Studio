@@ -1,83 +1,97 @@
 /* Kapitan knowledge for Likha Studio (data-site="likha").
-   Each entry: q = ways people ask it (English / Filipino / Taglish), a = the answer (markdown links OK). */
+   Each entry: q = ways people ask it (English / Filipino / Taglish), a = the answer (markdown links OK).
+   Kapitan only answers from these entries; anything else gets a polite "I can only answer about Likha Studio". */
 (function () {
   var home = location.href.replace(/[#?].*$/, '').replace(/[^\/]*$/, '').replace(/demo\/$/, '');
+  var G = 'https://garciaralphlawrence-svg.github.io/';
   var EMAIL = 'rlawrencegarcia03@gmail.com';
   var faq = [];
   function add(q, a) { faq.push({ site: 'likha', q: q, a: a }); }
 
   // first entry = overview
-  add(['what is likha studio', 'who are you', 'about likha', 'what do you do', 'ano ang likha', 'ano ginagawa nyo', 'services', 'what services do you offer', 'anong serbisyo'],
-    '**Likha Studio** builds 4 things:\n- **Websites that sell** (business, personal brand, event pages)\n- **Business systems** (school attendance kiosk, logins, records, Excel import/export)\n- **Kapitan AI assistant** — like me! — answering your customers 24/7\n- **Dashboards & data** from your Excel files\n[See live projects](' + home + '#work) · [Pricing](' + home + '#pricing)');
+  add(['what is likha studio', 'who are you', 'about likha', 'what do you do', 'ano ang likha', 'ano ginagawa nyo', 'services', 'what services do you offer', 'anong serbisyo', 'what can you build'],
+    '**Likha Studio** builds:\n- **Websites & web apps** (business sites, event pages, booking forms, portals)\n- **Business systems** (attendance, documents, KPIs, QR feedback)\n- **Work automation** (Excel, receipts, email reports, bulk PDFs)\n- **Dashboards & data** (reports, forecasting)\n- **Kapitan chat assistants**\n[See all services](' + home + '#services)');
 
-  add(['how much', 'price', 'pricing', 'magkano', 'magkano website', 'how much is a website', 'cost', 'rates', 'packages', 'presyo', 'quotation', 'quote'],
-    'Packages (starting prices):\n- **Launch** — ₱25,000 / $500 (about 1 week)\n- **Website + Kapitan** ⭐ — ₱45,000 / $800 (about 2 weeks)\n- **Business System** — from ₱60,000 / $1,200 (3–6 weeks)\nAdd-ons: Care plan ₱2,500/mo · Event page ₱8,000 · Kapitan for an existing site ₱1,500/mo.\n[Get a free quote](' + home + '#contact)');
+  add(['how much', 'price', 'pricing', 'magkano', 'magkano website', 'how much is a website', 'cost', 'rates', 'packages', 'presyo', 'quotation', 'quote', 'budget'],
+    'Every project is quoted based on what you need, and the quote is **free**. Tell Ralph what you want to build in the [contact form](' + home + '#contact) or email **' + EMAIL + '**.');
 
-  add(['launch package', 'cheapest', 'basic website', 'simple website', 'one page website', 'pinakamura', 'small business website'],
-    '**Launch — from ₱25,000 / $500:** up to 5 sections, mobile-first, motion design, your own domain connected, free hosting setup and 2 rounds of revisions. Ready in about 1 week.');
+  add(['automation', 'automate', 'what can you automate', 'work automation', 'excel automation', 'google sheets', 'repetitive tasks', 'save time', 'ma-automate', 'automatic'],
+    '**Work automation** Likha can build:\n- Excel and Google Sheets automation\n- Receipts and invoices (like [Resibo Maker](' + G + 'AI-Analytics-Studio/receipts/))\n- Automatic email reports\n- Certificates, IDs and PDFs in bulk\n- Data entry, cleaning and file sorting');
 
-  add(['website with chatbot', 'website and kapitan', 'most popular', 'website + kapitan', 'chatbot price', 'website with ai'],
-    '**Website + Kapitan — from ₱45,000 / $800** (most popular): everything in Launch plus multiple pages, Kapitan AI trained on your business, an event/menu/booking section and 1 month of free updates. About 2 weeks.');
+  add(['receipt', 'resibo', 'resibo maker', 'invoice', 'billing', 'official receipt', 'vat'],
+    '**Resibo Maker:** type a sale in English or Taglish and it makes the receipt, with VAT and senior/PWD discounts computed. [Try it](' + G + 'AI-Analytics-Studio/receipts/). Likha can build a receipt or invoice tool for your business too.');
 
-  add(['school system', 'attendance system', 'attendance kiosk', 'system for school', 'business system', 'payroll', 'enrollment system', 'records system', 'clinic system', 'may system ba kayo', 'pin attendance'],
-    '**Business System — from ₱60,000 / $1,200:** logins for admin, staff and parents; PIN attendance kiosk; records or bookings; dashboards and reports; Excel import & export; staff training + 1 month support. 3–6 weeks.\nTry the [School Suite demo](' + home + 'demo/school.html) — PIN 1234.');
+  add(['email report', 'automatic report', 'weekly report', 'monthly report', 'report automation'],
+    'Likha can set up **automatic reports**: your data is collected, summarized and sent by email on a schedule, e.g. every Monday morning.');
 
-  add(['kapitan', 'chatbot', 'ai assistant', 'what is kapitan', 'chat bot', 'ai chat', 'do i need to pay for ai', 'monthly ai fee', 'may bayad ba ang ai'],
-    "I'm **Kapitan** 👋 an assistant that learns a business's prices, schedule, location and contacts, then answers customers instantly in English, Filipino or Taglish — even at 2 AM. No AI subscription needed. Already on an existing site? Kapitan add-on is **₱1,500/mo ($30)**.");
+  add(['certificates', 'ids', 'bulk pdf', 'generate pdf', 'mail merge', 'certificate generator'],
+    'Likha can generate **certificates, IDs and PDFs in bulk** from a spreadsheet, so you don\'t make them one by one.');
+
+  add(['website', 'web app', 'landing page', 'booking', 'reservation', 'online menu', 'catalog', 'portal', 'event page', 'ticket page'],
+    '**Websites & web apps:** business and personal websites, event and ticket pages, booking and reservation forms, online menus and catalogs, and client or student portals. All mobile-friendly, on your own domain.');
+
+  add(['school system', 'attendance system', 'attendance kiosk', 'system for school', 'business system', 'enrollment system', 'records system', 'clinic system', 'may system ba kayo', 'pin attendance', 'inventory'],
+    '**Business systems:** attendance with a PIN kiosk, document management, KPI tracking, QR customer feedback, and records, inventory or requests. Try the [School Suite demo](' + home + 'demo/school.html) — PIN 1234.');
+
+  add(['dashboard', 'excel', 'data analysis', 'analytics', 'reports', 'spreadsheet', 'forecast', 'prediction', 'charts'],
+    '**Dashboards & data:** sales, school and KPI dashboards, forecasting, survey analysis and quality charts. Try [AI Analytics Studio](' + G + 'AI-Analytics-Studio/) — upload an Excel file and see.');
+
+  add(['kapitan', 'chatbot', 'ai assistant', 'what is kapitan', 'chat bot', 'ai chat', 'monthly ai fee', 'may bayad ba ang ai', 'do i need to pay for ai'],
+    "I'm **Kapitan** 👋 an assistant that learns a business's prices, schedule, location and contacts, then answers customers instantly in English, Filipino or Taglish, 24/7. I only answer questions about the website I'm on, and no AI subscription is needed.");
+
+  add(['tools', 'demo', 'try', 'ready made tools', 'sample', 'can i try'],
+    'Try these now:\n- [Resibo Maker](' + G + 'AI-Analytics-Studio/receipts/) — receipts with VAT\n- [AI Analytics Studio](' + G + 'AI-Analytics-Studio/) — Excel to dashboard\n- [School Suite demo](' + home + 'demo/school.html) — attendance kiosk\n- [SPC Studio](' + G + 'SPC-Studio/) — quality charts\n- [CareSight](' + G + 'CareSight/) — forecasting');
 
   add(['hosting', 'do i pay monthly', 'monthly payment', 'monthly fee', 'monthly cost', 'may monthly ba', 'hosting fee', 'server cost', 'buwanang bayad'],
-    'Most websites run on **free hosting — ₱0 a month**. You only pay for your domain (about ₱900 / $15 a year). Systems with logins and a database may need a small hosting fee, always quoted upfront.');
+    'Most websites can run on **free hosting**. Systems with logins and a database may need a small hosting fee, which Ralph explains in the quote.');
 
   add(['domain', 'own domain', '.com', 'website name', 'dot com'],
-    'Your domain (like yourbusiness.com) is about **₱900 / $15 a year**, registered in **your name**. Setup is included in every package.');
+    'Your domain (like yourbusiness.com) is registered in **your name**, and Ralph sets it up for you.');
 
   add(['how long', 'timeline', 'gaano katagal', 'kailan matatapos', 'turnaround', 'how many days', 'ilang araw'],
-    'Launch website: about **1 week**. Website + Kapitan: about **2 weeks**. Business system: **3–6 weeks**. You see a working preview within the first few days.');
+    'A website takes about **1 to 2 weeks** and a business system about **3 to 6 weeks**. You see a working preview within the first few days.');
 
   add(['payment', 'how to pay', 'downpayment', 'down payment', 'gcash', 'paypal', 'bank transfer', 'paano magbayad', 'installment'],
-    '**50% to start, 50% at launch.** Bank transfer, GCash, or PayPal for clients abroad.');
+    'Payment terms are explained in your free quote. Send a message through the [contact form](' + home + '#contact).');
 
-  add(['own the website', 'who owns', 'ownership', 'akin ba', 'can i move'],
-    'Yes, it is **all yours** — the domain, the site and the content. You can take everything with you anytime.');
+  add(['own the website', 'who owns', 'ownership', 'akin ba', 'can i move', 'my data'],
+    'Yes, it is **all yours**: the domain, the website or system, and your data.');
 
-  add(['update', 'maintenance', 'care plan', 'changes after launch', 'can i edit', 'edit myself', 'magpabago', 'support'],
-    '**Care plan — ₱2,500/mo ($45):** updates, new events, fixes — just send the changes. Or edit it yourself: content lives in one simple file and I show you how.');
-
-  add(['event page', 'show page', 'ticket page', 'concert', 'countdown page'],
-    '**Event / show page — ₱8,000 / $150:** countdown, ticket info, poster and venue map. See it on [Joseph Gelito\'s site](https://garciaralphlawrence-svg.github.io/Comedian-Demo/#event).');
+  add(['update', 'maintenance', 'support', 'changes after launch', 'can i edit', 'edit myself', 'magpabago', 'after launch'],
+    'Ralph stays with you after launch: content and event updates, new features, and training for your staff.');
 
   add(['portfolio', 'examples', 'sample work', 'previous work', 'projects', 'past projects', 'who are your clients', 'your clients', 'halimbawa', 'mga gawa'],
-    'All live right now:\n- [Future Minds Academy](https://futuremindsacademyph.com/) — school site + system\n- [Joseph Gelito](https://garciaralphlawrence-svg.github.io/Comedian-Demo/) — performer site\n- [KMM Travel](https://garciaralphlawrence-svg.github.io/KMM/) · [IslaKeys](https://garciaralphlawrence-svg.github.io/IslaKeys/) · [BizBuddy](https://garciaralphlawrence-svg.github.io/BizBuddy/)\n- [CareSight](https://garciaralphlawrence-svg.github.io/CareSight/) · [AI Analytics Studio](https://garciaralphlawrence-svg.github.io/AI-Analytics-Studio/) · [SPC Studio](https://garciaralphlawrence-svg.github.io/SPC-Studio/)');
+    'See Ralph\'s work:\n- [Ralph Garcia Portfolio](' + G + 'Ralph-Portfolio/)\n- [Future Minds Academy](https://futuremindsacademyph.com/) — school site + system\n- [CareSight](' + G + 'CareSight/) · [AI Analytics Studio](' + G + 'AI-Analytics-Studio/) · [SPC Studio](' + G + 'SPC-Studio/)\n- [IslaKeys](' + G + 'IslaKeys/) · [BizBuddy](' + G + 'BizBuddy/) · [KMM Travel](' + G + 'KMM/)\n[All projects](' + home + '#work)');
 
-  add(['hospital', 'hospital system', 'healthcare', 'medical center', 'uerm', 'quality management system', 'qms', 'iso 9001', 'clinic', 'case study'],
-    'Ralph built the **Quality Management System** used daily by UERM Medical Center\'s Quality Assurance Office (ISO 9001). Highlights:\n- **Customer Experience:** patients scan a QR code to give feedback, and every concern is tracked until resolved\n- **Knowledge Hub (K-Hub):** every policy and form in one searchable place, always the latest version\n- **KPI Generator:** departments enter monthly results and get Achieved / Not achieved automatically\n[See the case study](' + home + '#hospital)');
+  add(['hospital', 'hospital system', 'healthcare', 'medical center', 'uerm', 'quality management system', 'qms', 'iso 9001', 'case study'],
+    'Ralph built the **Quality Management System** used daily by UERM Medical Center\'s Quality Assurance Office (ISO 9001). Highlights:\n- **Customer Experience:** patients scan a QR code to give feedback\n- **Knowledge Hub (K-Hub):** every document in one searchable place\n- **KPI Generator:** monthly results marked Achieved / Not achieved automatically\n[See it](' + home + '#hospital)');
 
   add(['qr code', 'qr feedback', 'customer feedback', 'patient feedback', 'satisfaction survey', 'complaints', 'scan qr'],
-    '**QR feedback:** customers scan a QR code with their own phone, rate their experience and leave a comment, with no app or login. Each concern is assigned an owner and tracked to closure, and satisfaction trends update automatically. [See how it works](' + home + '#hospital)');
+    '**QR feedback:** customers scan a QR code with their own phone and rate their experience, with no app or login. Each concern gets an owner and is tracked until resolved. [See it](' + home + '#hospital)');
 
   add(['document management', 'k-hub', 'khub', 'knowledge hub', 'centralize documents', 'policies', 'sop', 'file storage'],
-    '**Knowledge Hub (K-Hub):** all policies, procedures and forms in one searchable library by department, with version history, read acknowledgements and review reminders. [See it](' + home + '#hospital)');
+    '**Knowledge Hub (K-Hub):** all policies, procedures and forms in one searchable library by department, always the latest approved version. [See it](' + home + '#hospital)');
 
   add(['kpi', 'performance', 'measure performance', 'kpi dashboard', 'key performance indicators', 'targets'],
-    '**KPI Generator:** each department sets KPIs and enters monthly results; the system marks them Achieved / Not achieved automatically. Missed targets need an approved action plan, and management sees everything on one heatmap. [See it](' + home + '#hospital)');
-
-  add(['dashboard', 'excel', 'data analysis', 'analytics', 'reports', 'spreadsheet', 'forecast'],
-    'Likha turns Excel files into dashboards, forecasts and plain-English reports. Try [AI Analytics Studio](https://garciaralphlawrence-svg.github.io/AI-Analytics-Studio/) — drop in a spreadsheet and see.');
+    '**KPI Generator:** departments enter monthly results and the system marks each one Achieved / Not achieved automatically. Missed targets need an approved action plan. [See it](' + home + '#hospital)');
 
   add(['contact', 'email', 'how to reach', 'talk to ralph', 'paano kayo makontak', 'message', 'hire', 'inquire', 'book a call', 'free call'],
-    'Email **' + EMAIL + '** or use the [contact form](' + home + '#contact) — the first call is free. You can also reach Ralph on [LinkedIn](https://www.linkedin.com/in/ralph-garcia-b57814401).');
+    'Email **' + EMAIL + '** or use the [contact form](' + home + '#contact). You can also reach Ralph on [LinkedIn](https://www.linkedin.com/in/ralph-garcia-b57814401).');
 
   add(['who is ralph', 'founder', 'developer', 'who will build', 'sino gagawa'],
-    '**Ralph Garcia** is the developer and data analyst behind Likha Studio. You talk directly to the person who designs and writes your code. [Full portfolio](https://garciaralphlawrence-svg.github.io/Ralph-Portfolio/)');
+    '**Ralph Garcia** is the developer and data analyst behind Likha Studio. You work directly with the person who designs and writes your code. [Full portfolio](' + G + 'Ralph-Portfolio/)');
 
-  add(['us clients', 'work with us clients', 'do you work with clients abroad', 'clients in the us', 'american clients', 'abroad', 'usa', 'america', 'outside philippines', 'dollar', 'usd', 'international'],
-    'Yes! Likha works with clients in the **Philippines and the US**, quotes in PHP or USD, and meets over Zoom, Google Meet or Messenger.');
+  add(['us clients', 'work with us clients', 'do you work with clients abroad', 'clients in the us', 'american clients', 'abroad', 'usa', 'america', 'outside philippines', 'international'],
+    'Yes! Likha works with clients in the **Philippines and the US**, and meets over Zoom, Google Meet or Messenger.');
 
   add(['what do you need from me', 'requirements', 'what to prepare', 'ano kailangan'],
-    'Just your logo, a few photos, your prices or services and your contact details. No logo or photos yet? Likha can help with that too.');
+    'Just tell Ralph what you want to build or automate. For websites: your logo, a few photos, your services and contact details.');
 
   add(['revisions', 'dont like the design', 'changes', 'pwede ipabago'],
-    'You see a working preview before the full build, and revisions are included in every package.');
+    'You see a working preview before the full build, and revisions are included.');
+
+  add(['secure', 'security', 'safe', 'hack', 'is it safe', 'privacy', 'data privacy'],
+    'Security is built in: sites run on HTTPS, no secret keys are ever put in the website code, logins use hashed passwords, and your data stays yours.');
 
   window.KAPITAN_KB = {
     v: 2,
@@ -85,8 +99,8 @@
       likha: {
         name: 'Likha Studio',
         url: home,
-        greeting: "Hi! I'm Kapitan 👋 Likha Studio's assistant. Ask me about prices, timelines or what we build — English or Taglish!",
-        suggestions: ['How much is a website?', 'Magkano ang school system?', 'Do I pay monthly for hosting?', 'How do I contact Ralph?'],
+        greeting: "Hi! I'm Kapitan 👋 Likha Studio's assistant. Ask me what Likha can build or automate — English or Taglish!",
+        suggestions: ['What can you automate?', 'Magkano ang website?', 'What is the Resibo Maker?', 'How do I contact Ralph?'],
         aliases: ['likha', 'likha studio']
       }
     },
