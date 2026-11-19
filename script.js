@@ -176,9 +176,9 @@ $('#cForm').addEventListener('submit', async e => {
   const data = { name: f.get('name'), email: f.get('email'), business: f.get('biz') || '-', need: f.get('need'), message: f.get('msg') || '-', _subject: subject, _template: 'table', _captcha: 'false' };
   btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
   try {
-    const res = await fetch('https://formsubmit.co/ajax/' + CONTACT.email, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+    const res = await fetch('https://formsubmit.co/ajax/' + CONTACT.email, { method: 'POST', referrerPolicy: 'no-referrer-when-downgrade', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
     const j = await res.json().catch(() => ({}));
-    if (!res.ok || String(j.success) !== 'true') throw new Error(j.message || 'send failed');
+    if (!res.ok || String(j.success) !== 'true') { console.warn('Contact form:', j.message || res.status); throw new Error(j.message || 'send failed'); }
     form.reset();
     note.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message was sent. I will reply by email.';
     note.className = 'c-note ok';
