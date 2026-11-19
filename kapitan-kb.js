@@ -66,8 +66,8 @@
   add(['portfolio', 'examples', 'sample work', 'previous work', 'projects', 'past projects', 'who are your clients', 'your clients', 'halimbawa', 'mga gawa'],
     'See Ralph\'s work:\n- [Ralph Garcia Portfolio](' + G + 'Ralph-Portfolio/)\n- [Future Minds Academy](https://futuremindsacademyph.com/) — school site + system\n- [CareSight](' + G + 'CareSight/) · [AI Analytics Studio](' + G + 'AI-Analytics-Studio/) · [SPC Studio](' + G + 'SPC-Studio/)\n- [IslaKeys](' + G + 'IslaKeys/) · [BizBuddy](' + G + 'BizBuddy/) · [KMM Travel](' + G + 'KMM/)\n[All projects](' + home + '#work)');
 
-  add(['hospital', 'hospital system', 'healthcare', 'medical center', 'uerm', 'quality management system', 'qms', 'iso 9001', 'case study'],
-    'Ralph built the **Quality Management System** used daily by UERM Medical Center\'s Quality Assurance Office (ISO 9001). Highlights:\n- **Customer Experience:** patients scan a QR code to give feedback\n- **Knowledge Hub (K-Hub):** every document in one searchable place\n- **KPI Generator:** monthly results marked Achieved / Not achieved automatically\n[See it](' + home + '#hospital)');
+  add(['hospital', 'hospital system', 'healthcare', 'medical center', 'quality management system', 'qms', 'iso 9001', 'case study'],
+    'Ralph built the **Quality Management System** used daily by a Manila medical center\'s Quality Assurance Office (ISO 9001). Highlights:\n- **Customer Experience:** patients scan a QR code to give feedback\n- **Knowledge Hub (K-Hub):** every document in one searchable place\n- **KPI Generator:** monthly results marked Achieved / Not achieved automatically\n[See it](' + home + '#hospital)');
 
   add(['qr code', 'qr feedback', 'customer feedback', 'patient feedback', 'satisfaction survey', 'complaints', 'scan qr'],
     '**QR feedback:** customers scan a QR code with their own phone and rate their experience, with no app or login. Each concern gets an owner and is tracked until resolved. [See it](' + home + '#hospital)');
@@ -79,7 +79,16 @@
     '**KPI Generator:** departments enter monthly results and the system marks each one Achieved / Not achieved automatically. Missed targets need an approved action plan. [See it](' + home + '#hospital)');
 
   add(['contact', 'email', 'how to reach', 'talk to ralph', 'paano kayo makontak', 'message', 'hire', 'inquire', 'book a call', 'free call'],
-    'Email **' + EMAIL + '** or use the [contact form](' + home + '#contact). You can also reach Ralph on [LinkedIn](https://www.linkedin.com/in/ralph-garcia-b57814401).');
+    'Email **' + EMAIL + '** or send a message with the [contact form](' + home + '#contact). It goes straight to Ralph\'s inbox.');
+
+  add(['how many websites', 'how many clients', 'how many projects', 'experience', 'track record', 'ilang website'],
+    'Ralph currently manages **20+ websites**, and **10 live projects** are on this site for you to open. [See projects](' + home + '#work)');
+
+  add(['who do you help', 'industries', 'what businesses', 'restaurant', 'cafe', 'clinic', 'office', 'small business', 'real estate', 'travel agency', 'events'],
+    'Likha helps:\n- **Schools & tutorial centers**\n- **Clinics & hospitals**\n- **Restaurants & cafés**\n- **Offices & small businesses**\n- **Real estate & travel**\n- **Events & personal brands**\n[See what fits you](' + home + '#industries)');
+
+  add(['speaker', 'talk', 'fuse', 'human behind the machine'],
+    'Ralph was an **invited speaker at FUSE** (Foundation for Upgrading the Standard of Education) with the talk **"The Human Behind the Machine"**.');
 
   add(['who is ralph', 'founder', 'developer', 'who will build', 'sino gagawa'],
     '**Ralph Garcia** is the developer and data analyst behind Likha Studio. You work directly with the person who designs and writes your code. [Full portfolio](' + G + 'Ralph-Portfolio/)');

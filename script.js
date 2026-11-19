@@ -84,12 +84,12 @@ $$('a', links).forEach(a => a.addEventListener('click', () => { links.classList.
 })();
 
 /* count-up numbers */
-function countTo(el, end) {
+function countTo(el, end, suf = '') {
   if (reduce || still) return;
   const t0 = performance.now();
-  (function step(t) { const k = Math.min(1, (t - t0) / 1200); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); })(t0);
+  (function step(t) { const k = Math.min(1, (t - t0) / 1200); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))) + suf; if (k < 1) requestAnimationFrame(step); })(t0);
 }
-setTimeout(() => $$('.proof b[data-count]').forEach(b => countTo(b, +b.dataset.count)), still || reduce ? 0 : 2300);
+setTimeout(() => $$('.proof b[data-count]').forEach(b => countTo(b, +b.dataset.count, b.dataset.suffix || '')), still || reduce ? 0 : 2300);
 
 /* drifting gold dust in the hero (pauses when the hero is off-screen) */
 (() => {
@@ -164,17 +164,31 @@ $('#faqList').innerHTML = FAQ.map(([q, a], i) => `<details class="reveal"${i ===
   if (CONTACT.messenger) items.push([CONTACT.messenger, 'fa-brands fa-facebook-messenger', 'Messenger', 'Chat with me']);
   if (CONTACT.whatsapp) items.push(['https://wa.me/' + CONTACT.whatsapp, 'fa-brands fa-whatsapp', 'WhatsApp', '+' + CONTACT.whatsapp]);
   if (CONTACT.phone) items.push(['tel:' + CONTACT.phone.replace(/[^\d+]/g, ''), 'fa-solid fa-phone', 'Call / Viber', CONTACT.phone]);
-  items.push([CONTACT.linkedin, 'fa-brands fa-linkedin-in', 'LinkedIn', 'Ralph Garcia']);
   items.push(['#', 'fa-solid fa-comment-dots', 'Chat assistant', 'Instant answers, 24/7']);
   $('#cDirect').innerHTML = items.map(([href, ic, label, val]) => `<a href="${esc(href)}"${/^https?:/.test(href) ? ' target="_blank" rel="noopener"' : ''}${label === 'Chat assistant' ? ' data-kapitan' : ''}><span class="ci"><i class="${ic}"></i></span><span><small>${label}</small><b>${esc(val)}</b></span></a>`).join('');
   $$('[data-contact="linkedin"]').forEach(a => a.href = CONTACT.linkedin);
 })();
-$('#cForm').addEventListener('submit', e => {
+$('#cForm').addEventListener('submit', async e => {
   e.preventDefault();
-  const f = new FormData(e.target);
-  const subject = `Project inquiry: ${f.get('need')}${f.get('biz') ? ' for ' + f.get('biz') : ''}`;
-  const body = `Hi Ralph,\n\nName: ${f.get('name')}\nBusiness / school: ${f.get('biz') || '-'}\nI need: ${f.get('need')}\n\n${f.get('msg') || ''}\n`;
-  location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const form = e.target, f = new FormData(form), note = $('#cNote'), btn = form.querySelector('button[type="submit"]');
+  if (f.get('_honey')) return; // spam bots fill the hidden field
+  const subject = `Likha Studio inquiry: ${f.get('need')}${f.get('biz') ? ' for ' + f.get('biz') : ''}`;
+  const data = { name: f.get('name'), email: f.get('email'), business: f.get('biz') || '-', need: f.get('need'), message: f.get('msg') || '-', _subject: subject, _template: 'table', _captcha: 'false' };
+  btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/' + CONTACT.email, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+    const j = await res.json().catch(() => ({}));
+    if (!res.ok || String(j.success) !== 'true') throw new Error(j.message || 'send failed');
+    form.reset();
+    note.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message was sent. I will reply by email.';
+    note.className = 'c-note ok';
+  } catch (err) {
+    const body = `Hi Ralph,\n\nName: ${data.name}\nEmail: ${data.email}\nBusiness: ${data.business}\nI need: ${data.need}\n\n${data.message}\n`;
+    note.innerHTML = 'Could not send automatically. <a href="mailto:' + CONTACT.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body) + '">Click here to send it by email instead.</a>';
+    note.className = 'c-note warn';
+  } finally {
+    btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send my request';
+  }
 });
 
 /* open Kapitan from any [data-kapitan] button */

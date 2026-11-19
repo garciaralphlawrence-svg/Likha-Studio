@@ -333,3 +333,43 @@ h1, h2, h3, .proof b, .steps span, .logo, .intro-mark { font-variant-numeric: li
   .proof b { font-size: 1.15rem; }
   .proof span { font-size: .7rem; line-height: 1.35; }
 }
+
+
+/* ================= additions: who I help, demo clip, speaking photo, form states ================= */
+.ind-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ind { position: relative; padding: 26px 24px; border-radius: var(--r); background: linear-gradient(160deg, rgba(58,13,24,.55), rgba(29,7,15,.55)); border: 1px solid var(--line); box-shadow: var(--shadow); overflow: hidden; transition: transform .5s var(--ease), border-color .4s; }
+.ind::before { content: ""; position: absolute; right: -40px; top: -40px; width: 140px; height: 140px; border-radius: 50%; background: radial-gradient(circle, rgba(232,199,138,.16), transparent 70%); transition: transform .6s var(--ease); }
+.ind:hover { transform: translateY(-6px); border-color: var(--line-2); }
+.ind:hover::before { transform: scale(1.6); }
+.ind i { position: relative; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: var(--gold-grad); color: #2a0b14; font-size: 1.1rem; margin-bottom: 16px; box-shadow: 0 0 0 6px rgba(232,199,138,.08); transition: transform .5s var(--ease); }
+.ind:hover i { transform: rotate(-10deg) scale(1.08); }
+.ind h3 { position: relative; font-size: 1.25rem; margin-bottom: 8px; }
+.ind p { position: relative; color: var(--text-2); font-size: .9rem; }
+
+.demo { display: grid; grid-template-columns: 1.35fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; padding: 22px; border-radius: 22px; background: linear-gradient(160deg, rgba(58,13,24,.6), rgba(29,7,15,.5)); border: 1px solid var(--line-2); box-shadow: var(--shadow); }
+.demo .frame img { aspect-ratio: 16 / 9; object-fit: cover; object-position: top; }
+.demo-copy { display: grid; gap: 14px; justify-items: start; }
+.demo-copy h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
+.demo-copy p { color: var(--text-2); font-size: .95rem; }
+
+.about { grid-template-columns: 1.1fr 1fr; }
+.about-photo { margin: 0; aspect-ratio: auto; background: #12040a; }
+.about-photo img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: 70% 40%; filter: none; }
+.about-photo figcaption { position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 3; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; font-size: .8rem; color: #fff6f0; background: rgba(22,5,9,.82); backdrop-filter: blur(8px); border: 1px solid var(--line-2); }
+.about-photo figcaption i { color: var(--gold); }
+
+.hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.c-note.ok { color: var(--ok); }
+.c-note.warn { color: var(--gold-2); }
+.c-note a { color: var(--gold); text-decoration: underline; }
+.btn:disabled { opacity: .7; cursor: wait; transform: none; }
+
+@media (max-width: 1024px) { .ind-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 900px) { .demo { grid-template-columns: 1fr; gap: 22px; } .about { grid-template-columns: 1fr; } .about-photo { max-width: none; } }
+@media (max-width: 640px) {
+  .ind-grid { grid-template-columns: 1fr; }
+  .ind { padding: 22px 20px; }
+  .demo { padding: 14px; margin-bottom: 30px; }
+  .about-photo figcaption { font-size: .72rem; left: 10px; right: 10px; bottom: 10px; padding: 8px 10px; }
+  .proof { grid-template-columns: repeat(3, 1fr); }
+}
