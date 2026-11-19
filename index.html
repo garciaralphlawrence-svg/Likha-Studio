@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Likha Studio — Websites, Systems & AI Assistants</title>
+  <meta name="description" content="Likha Studio builds websites, school and business systems, and Kapitan AI chat assistants for Filipino and US businesses. See 10 live projects and try the demos.">
+  <meta property="og:title" content="Likha Studio — Websites, Systems & AI Assistants">
+  <meta property="og:description" content="Websites that sell, systems that save hours, and an AI assistant that answers your customers 24/7.">
+  <meta property="og:image" content="assets/og.jpg">
+  <meta name="theme-color" content="#08090d">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- intro -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <svg class="sun" viewBox="0 0 100 100"><use href="#sunmark"/></svg>
+      <div class="loader-word"><span>L</span><span>i</span><span>k</span><span>h</span><span>a</span></div>
+    </div>
+    <div class="loader-panel"></div>
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="sunGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd166"/><stop offset=".55" stop-color="#ff9f43"/><stop offset="1" stop-color="#ff5d5d"/></linearGradient>
+      <symbol id="sunmark" viewBox="0 0 100 100">
+        <g fill="url(#sunGrad)">
+          <circle cx="50" cy="50" r="17"/>
+          <g id="ray"><path d="M50 4 L55 26 L50 30 L45 26 Z"/></g>
+          <use href="#ray" transform="rotate(45 50 50)"/><use href="#ray" transform="rotate(90 50 50)"/><use href="#ray" transform="rotate(135 50 50)"/>
+          <use href="#ray" transform="rotate(180 50 50)"/><use href="#ray" transform="rotate(225 50 50)"/><use href="#ray" transform="rotate(270 50 50)"/><use href="#ray" transform="rotate(315 50 50)"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo" aria-label="Likha Studio home"><svg class="logo-sun" viewBox="0 0 100 100"><use href="#sunmark"/></svg><span>Likha<em>Studio</em></span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#work">Work</a><a href="#services">Services</a><a href="#demos">Live demos</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a>
+      </nav>
+      <a href="#contact" class="btn btn-sun btn-sm nav-cta">Get a free quote</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+      <div class="grid-bg" aria-hidden="true"></div>
+      <svg class="hero-sun" viewBox="0 0 100 100" aria-hidden="true"><use href="#sunmark"/></svg>
+
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span>Web · Systems · AI assistants — for PH &amp; US businesses</p>
+          <h1 class="hero-title">
+            <span class="line"><span>Websites &amp; systems</span></span>
+            <span class="line"><span>that make your</span></span>
+            <span class="line"><span>business look <em class="grad">big.</em></span></span>
+          </h1>
+          <p class="hero-sub">Built for <span class="rotator" id="rotator"><b>schools</b><b>clinics</b><b>performers</b><b>restaurants</b><b>travel agencies</b><b>small businesses</b></span><br>Beautiful sites, smart systems, and <strong>Kapitan</strong>, an AI assistant that answers your customers 24/7.</p>
+          <div class="hero-btns">
+            <a href="#work" class="btn btn-sun">See live projects <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="#demos" class="btn btn-ghost"><i class="fa-solid fa-play"></i> Try a demo</a>
+          </div>
+          <div class="hero-proof">
+            <div><b data-count="10">10</b><span>live projects<br>you can open now</span></div>
+            <div><b>24/7</b><span>Kapitan AI on<br>every site</span></div>
+            <div><b data-count="0" data-prefix="₱">₱0</b><span>monthly hosting<br>on most sites</span></div>
+          </div>
+        </div>
+
+        <div class="hero-stage" id="stage" aria-label="Recent projects">
+          <div class="stack" id="stack"></div>
+          <div class="float-tag t1"><i class="fa-solid fa-mobile-screen"></i> Mobile-ready</div>
+          <div class="float-tag t2"><i class="fa-solid fa-bolt"></i> Loads fast</div>
+          <div class="float-tag t3"><span class="mini-orb"></span> Kapitan AI built in</div>
+        </div>
+      </div>
+      <a href="#trust" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ================= TRUST STRIP ================= -->
+    <div class="marquee" id="trust" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Websites</span><i>✦</i><span>School systems</span><i>✦</i><span>AI chat assistants</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Attendance kiosks</span><i>✦</i><span>Event &amp; ticket pages</span><i>✦</i><span>Excel automation</span><i>✦</i><span>Booking portals</span><i>✦</i>
+        <span>Websites</span><i>✦</i><span>School systems</span><i>✦</i><span>AI chat assistants</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Attendance kiosks</span><i>✦</i><span>Event &amp; ticket pages</span><i>✦</i><span>Excel automation</span><i>✦</i><span>Booking portals</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ================= WORK ================= -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="kicker">01 — Selected work</span>
+          <h2>Real projects. <em>Live right now.</em></h2>
+          <p>Every project below is online. Open any of them on your phone while we talk.</p>
+        </div>
+        <div class="filters reveal" role="tablist" aria-label="Filter projects">
+          <button class="on" data-filter="all">All</button><button data-filter="web">Websites</button><button data-filter="sys">Systems</button><button data-filter="ai">AI &amp; data</button>
+        </div>
+        <div class="work-grid" id="workGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section alt" id="services">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="kicker">02 — What I build</span>
+          <h2>Four ways to <em>grow your business.</em></h2>
+        </div>
+        <div class="services">
+          <article class="service reveal">
+            <span class="s-num">01</span><i class="fa-solid fa-display s-ico"></i>
+            <h3>Websites that sell</h3>
+            <p>A fast, beautiful site with motion that makes people trust you before they call. Mobile-first, connected to your own domain.</p>
+            <ul><li>Business &amp; personal brand sites</li><li>Event and ticket pages</li><li>Menus, packages, galleries</li></ul>
+          </article>
+          <article class="service reveal">
+            <span class="s-num">02</span><i class="fa-solid fa-school s-ico"></i>
+            <h3>Business systems</h3>
+            <p>Replace paper logbooks and messy spreadsheets with a system your staff can use from day one.</p>
+            <ul><li>Attendance kiosk with PIN</li><li>Logins for admin, staff, parents</li><li>Excel import &amp; export</li></ul>
+          </article>
+          <article class="service reveal">
+            <span class="s-num">03</span><span class="s-ico orb-ico"><span class="mini-orb"></span></span>
+            <h3>Kapitan AI assistant</h3>
+            <p>A chat assistant trained on <em>your</em> business. Answers prices, schedules and FAQs in English or Taglish, day and night.</p>
+            <ul><li>No monthly AI fees</li><li>Knows your prices &amp; contacts</li><li>Works on any website</li></ul>
+          </article>
+          <article class="service reveal">
+            <span class="s-num">04</span><i class="fa-solid fa-chart-line s-ico"></i>
+            <h3>Dashboards &amp; data</h3>
+            <p>Turn your Excel files into clear dashboards, forecasts and reports you can show your boss or board.</p>
+            <ul><li>Sales &amp; KPI dashboards</li><li>Forecasts and trends</li><li>Quality &amp; process charts</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LIVE DEMOS ================= -->
+    <section class="section" id="demos">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="kicker">03 — Try it yourself</span>
+          <h2>Don't take my word for it. <em>Click around.</em></h2>
+        </div>
+        <div class="demo-tabs reveal" role="tablist">
+          <button class="on" data-tab="kiosk"><i class="fa-solid fa-id-badge"></i> Attendance kiosk</button>
+          <button data-tab="chat"><span class="mini-orb"></span> Kapitan AI chat</button>
+          <button data-tab="dash"><i class="fa-solid fa-chart-column"></i> Excel → dashboard</button>
+        </div>
+
+        <div class="demo-panels reveal">
+          <!-- kiosk -->
+          <div class="demo-panel on" data-panel="kiosk">
+            <div class="demo-copy">
+              <h3>School Suite: PIN attendance kiosk</h3>
+              <p>Teachers tap their 4-digit PIN at the entrance. The time is logged instantly, and late arrivals are flagged for the admin. No more paper logbook.</p>
+              <p class="hint"><i class="fa-solid fa-hand-pointer"></i> Try PIN <b>1234</b> (Ms. Santos) or <b>2468</b> (Mr. Reyes).</p>
+              <a class="btn btn-sun" href="demo/school.html" target="_blank" rel="noopener">Open the full School Suite demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="kiosk" id="kiosk">
+              <div class="k-top"><span class="k-school"><i class="fa-solid fa-graduation-cap"></i> Sunrise Learning Center</span><span class="k-clock" id="kClock">--:--</span></div>
+              <div class="k-screen">
+                <div class="k-msg" id="kMsg">Enter your PIN</div>
+                <div class="k-dots" id="kDots"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="k-pad" id="kPad"></div>
+              <ul class="k-log" id="kLog"><li class="empty">No one has timed in yet today.</li></ul>
+            </div>
+          </div>
+
+          <!-- chat -->
+          <div class="demo-panel" data-panel="chat">
+            <div class="demo-copy">
+              <h3>Kapitan answers your customers for you</h3>
+              <p>Kapitan learns your prices, schedule, location and contacts, then answers questions instantly, even at 2 AM. It understands English, Filipino and Taglish.</p>
+              <p class="hint"><i class="fa-solid fa-circle-info"></i> The Kapitan on this page knows about Likha Studio. Ask it about prices!</p>
+              <div class="btn-row">
+                <button class="btn btn-sun" id="openKapitan"><span class="mini-orb"></span> Chat with Kapitan now</button>
+                <a class="btn btn-ghost" href="https://garciaralphlawrence-svg.github.io/Comedian-Demo/kapitan.html" target="_blank" rel="noopener">See a client's Kapitan ↗</a>
+              </div>
+            </div>
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="chat-head"><span class="mini-orb"></span><div><b>Kapitan</b><small>Online · instant answers</small></div></div>
+              <div class="chat-body" id="chatDemo"></div>
+            </div>
+          </div>
+
+          <!-- dashboard -->
+          <div class="demo-panel" data-panel="dash">
+            <div class="demo-copy">
+              <h3>Drop in a spreadsheet, get a dashboard</h3>
+              <p>Upload your sales, enrollment or patient data and get charts, trends and plain-English insights in seconds. Your data stays in your browser.</p>
+              <div class="btn-row">
+                <button class="btn btn-ghost" id="reDash"><i class="fa-solid fa-rotate"></i> Replay</button>
+                <a class="btn btn-sun" href="https://garciaralphlawrence-svg.github.io/AI-Analytics-Studio/" target="_blank" rel="noopener">Open AI Analytics Studio ↗</a>
+              </div>
+            </div>
+            <div class="dash" id="dash">
+              <div class="d-file"><i class="fa-solid fa-file-excel"></i><span>coffee-sales-2026.xlsx</span><b id="dStatus">Reading…</b></div>
+              <div class="d-kpis">
+                <div><small>Revenue</small><b data-to="482350" data-prefix="₱">₱0</b><em class="up">▲ 18%</em></div>
+                <div><small>Orders</small><b data-to="9614">0</b><em class="up">▲ 11%</em></div>
+                <div><small>Avg. order</small><b data-to="502" data-prefix="₱">₱0</b><em class="dn">▼ 2%</em></div>
+              </div>
+              <div class="d-chart"><div class="d-bars" id="dBars"></div><svg class="d-line" viewBox="0 0 300 100" preserveAspectRatio="none"><path id="dLine" d=""/></svg></div>
+              <p class="d-insight" id="dInsight"><i class="fa-solid fa-wand-magic-sparkles"></i> <span></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section class="section alt" id="pricing">
+      <div class="wrap">
+        <div class="sec-head center reveal">
+          <span class="kicker">04 — Simple pricing</span>
+          <h2>Clear packages. <em>No surprises.</em></h2>
+          <div class="currency" role="group" aria-label="Currency">
+            <button class="on" data-cur="php">₱ PHP</button><button data-cur="usd">$ USD</button><span class="knob"></span>
+          </div>
+        </div>
+        <div class="plans">
+          <article class="plan reveal">
+            <h3>Launch</h3><p class="p-for">For a personal brand or small business</p>
+            <div class="price"><small>from</small><b data-php="25,000" data-usd="500">₱25,000</b></div>
+            <ul><li>Up to 5 sections, mobile-first</li><li>Motion design &amp; animations</li><li>Your own domain connected</li><li>Free hosting setup</li><li>2 rounds of revisions</li></ul>
+            <p class="p-time"><i class="fa-regular fa-clock"></i> About 1 week</p>
+            <a href="#contact" class="btn btn-ghost" data-plan="Launch">Start with Launch</a>
+          </article>
+          <article class="plan pop reveal">
+            <span class="badge">Most popular</span>
+            <h3>Website + Kapitan</h3><p class="p-for">For businesses that get lots of questions</p>
+            <div class="price"><small>from</small><b data-php="45,000" data-usd="800">₱45,000</b></div>
+            <ul><li>Everything in Launch</li><li>Multiple pages</li><li><b>Kapitan AI</b> trained on your business</li><li>Event, menu or booking section</li><li>1 month of free updates</li></ul>
+            <p class="p-time"><i class="fa-regular fa-clock"></i> About 2 weeks</p>
+            <a href="#contact" class="btn btn-sun" data-plan="Website + Kapitan">Choose this plan</a>
+          </article>
+          <article class="plan reveal">
+            <h3>Business System</h3><p class="p-for">For schools, clinics and growing teams</p>
+            <div class="price"><small>from</small><b data-php="60,000" data-usd="1,200">₱60,000</b></div>
+            <ul><li>Logins &amp; roles (admin, staff, parents)</li><li>Attendance, records or bookings</li><li>Dashboards &amp; reports</li><li>Excel import &amp; export</li><li>Staff training + 1 month support</li></ul>
+            <p class="p-time"><i class="fa-regular fa-clock"></i> 3 to 6 weeks</p>
+            <a href="#contact" class="btn btn-ghost" data-plan="Business System">Talk about a system</a>
+          </article>
+        </div>
+        <div class="addons reveal">
+          <div><i class="fa-solid fa-screwdriver-wrench"></i><b>Care plan</b><span data-php="₱2,500/mo" data-usd="$45/mo">₱2,500/mo</span><small>updates, new events, fixes</small></div>
+          <div><span class="mini-orb"></span><b>Kapitan for your existing site</b><span data-php="₱1,500/mo" data-usd="$30/mo">₱1,500/mo</span><small>setup + keeping it up to date</small></div>
+          <div><i class="fa-solid fa-ticket"></i><b>Event / show page</b><span data-php="₱8,000" data-usd="$150">₱8,000</span><small>countdown, tickets, poster</small></div>
+          <div><i class="fa-solid fa-globe"></i><b>Domain</b><span data-php="≈ ₱900/yr" data-usd="≈ $15/yr">≈ ₱900/yr</span><small>registered in your name</small></div>
+        </div>
+        <p class="fine reveal">50% to start, 50% at launch. The website, domain and content are yours.</p>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+    <section class="section" id="process">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="kicker">05 — How it works</span>
+          <h2>From first chat to launch <em>in five steps.</em></h2>
+        </div>
+        <ol class="steps" id="steps">
+          <li class="reveal"><span class="st-n">1</span><div><h3>Free call</h3><p>Tell me about your business and what is slowing you down. You get a clear quote, no pressure.</p></div></li>
+          <li class="reveal"><span class="st-n">2</span><div><h3>Design preview</h3><p>Within a few days you see a working preview, not just a drawing, so you know exactly what you are getting.</p></div></li>
+          <li class="reveal"><span class="st-n">3</span><div><h3>Build &amp; revise</h3><p>I build it out and you review on your phone. Changes are included in every package.</p></div></li>
+          <li class="reveal"><span class="st-n">4</span><div><h3>Launch &amp; train</h3><p>We go live on your domain. Your team gets a walkthrough and a simple guide.</p></div></li>
+          <li class="reveal"><span class="st-n">5</span><div><h3>Grow</h3><p>Add new events, features or Kapitan answers whenever you need them.</p></div></li>
+          <span class="steps-line" aria-hidden="true"><i id="stepsFill"></i></span>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= FOUNDER ================= -->
+    <section class="section alt" id="founder">
+      <div class="wrap founder">
+        <div class="f-photo reveal">
+          <div class="f-ring"></div><div class="f-ring r2"></div><div class="f-glow"></div>
+          <picture><source srcset="assets/ralph-cutout.webp" type="image/webp"><img src="assets/ralph-cutout.png" alt="Ralph Garcia, founder of Likha Studio" loading="lazy"></picture>
+          <div class="f-chip"><i class="fa-solid fa-code"></i> Designs &amp; codes every project</div>
+        </div>
+        <div class="f-copy">
+          <div class="sec-head reveal"><span class="kicker">06 — Who you'll work with</span><h2>Hi, I'm <em>Ralph.</em></h2></div>
+          <p class="reveal">I'm the developer and data analyst behind Likha Studio. When you hire Likha, you talk directly to the person who designs and writes your code. No middlemen, no handoffs, no slow replies.</p>
+          <p class="reveal">I build fast, beautiful websites and practical systems for schools, healthcare teams, performers and small businesses, and I add Kapitan so your customers get answers even while you sleep.</p>
+          <div class="f-points reveal">
+            <span><i class="fa-solid fa-check"></i> Direct line to the developer</span>
+            <span><i class="fa-solid fa-check"></i> You own your site &amp; domain</span>
+            <span><i class="fa-solid fa-check"></i> English &amp; Filipino</span>
+            <span><i class="fa-solid fa-check"></i> PH &amp; US clients</span>
+          </div>
+          <div class="btn-row reveal">
+            <a class="btn btn-ghost" href="https://garciaralphlawrence-svg.github.io/Ralph-Portfolio/" target="_blank" rel="noopener"><i class="fa-solid fa-user"></i> Full portfolio</a>
+            <a class="btn btn-ghost" data-contact="linkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq">
+      <div class="wrap narrow">
+        <div class="sec-head center reveal"><span class="kicker">07 — Questions</span><h2>Good to <em>know.</em></h2></div>
+        <div class="faq" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact">
+      <div class="aurora soft" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+      <div class="wrap contact-grid">
+        <div class="c-copy">
+          <span class="kicker reveal">08 — Let's talk</span>
+          <h2 class="big-cta reveal">Let's build <em class="grad">yours.</em></h2>
+          <p class="reveal">Tell me what you need and I'll reply with ideas and a clear quote. The first call is free.</p>
+          <div class="c-direct reveal" id="cDirect"></div>
+        </div>
+        <form class="c-form reveal" id="cForm">
+          <div class="row2">
+            <label>Your name<input name="name" required autocomplete="name" placeholder="Juan dela Cruz"></label>
+            <label>Business / school<input name="biz" autocomplete="organization" placeholder="Sunrise Learning Center"></label>
+          </div>
+          <label>What do you need?
+            <select name="need" id="cNeed">
+              <option>A new website</option><option>Website + Kapitan AI</option><option>A school / business system</option><option>Kapitan for my existing site</option><option>A dashboard from my data</option><option>An event / show page</option><option>Not sure yet</option>
+            </select>
+          </label>
+          <label>Budget
+            <select name="budget"><option>Not sure yet</option><option>Under ₱25,000 / $500</option><option>₱25,000–50,000 / $500–1,000</option><option>₱50,000–100,000 / $1,000–2,000</option><option>₱100,000+ / $2,000+</option></select>
+          </label>
+          <label>Tell me a little about it<textarea name="msg" rows="4" placeholder="e.g. We have 25 teachers and still use a paper logbook…"></textarea></label>
+          <button class="btn btn-sun wide" type="submit"><i class="fa-solid fa-paper-plane"></i> Send my request</button>
+          <p class="c-note">This opens your email app with everything filled in. Prefer chat? Use the buttons on the left.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a href="#top" class="logo"><svg class="logo-sun" viewBox="0 0 100 100"><use href="#sunmark"/></svg><span>Likha<em>Studio</em></span></a>
+      <p>Websites, systems &amp; AI assistants. Made in the Philippines for clients everywhere.</p>
+      <span>© <span id="year"></span> Likha Studio · Ralph Garcia</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="kapitan-kb.js"></script>
+  <script src="https://garciaralphlawrence-svg.github.io/AI-Analytics-Studio/widget/kapitan.js" data-site="likha" data-api="none" defer></script>
+</body>
+</html>

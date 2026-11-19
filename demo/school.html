@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School Suite Demo — Likha Studio</title>
+  <meta name="description" content="Try a school management demo: PIN attendance kiosk, live dashboard, attendance records, teacher list and monthly reports with Excel export.">
+  <meta name="theme-color" content="#0b0d13">
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="school.css">
+</head>
+<body>
+  <div class="demo-banner"><i class="fa-solid fa-flask"></i> Demo with sample data. Everything you do stays in this browser. <a href="../#contact">Want this for your school? →</a></div>
+  <div class="app">
+    <aside class="side" id="side">
+      <div class="brand"><span class="crest"><i class="fa-solid fa-graduation-cap"></i></span><div><b>Sunrise Learning Center</b><small>School Suite</small></div></div>
+      <nav class="menu" id="menu">
+        <button data-view="dash" class="on"><i class="fa-solid fa-gauge-high"></i>Dashboard</button>
+        <button data-view="kiosk"><i class="fa-solid fa-id-badge"></i>Attendance kiosk</button>
+        <button data-view="records"><i class="fa-solid fa-table-list"></i>Attendance records</button>
+        <button data-view="people"><i class="fa-solid fa-chalkboard-user"></i>Teachers &amp; staff</button>
+        <button data-view="reports"><i class="fa-solid fa-file-invoice"></i>Monthly report</button>
+      </nav>
+      <div class="side-foot">
+        <button class="ghost-btn" id="resetDemo"><i class="fa-solid fa-rotate-left"></i> Reset demo data</button>
+        <a class="made" href="../"><svg viewBox="0 0 100 100" width="18" height="18"><g fill="#ffb547"><circle cx="50" cy="50" r="17"/><path d="M50 4 L55 26 L50 30 L45 26 Z" id="r"/><use href="#r" transform="rotate(45 50 50)"/><use href="#r" transform="rotate(90 50 50)"/><use href="#r" transform="rotate(135 50 50)"/><use href="#r" transform="rotate(180 50 50)"/><use href="#r" transform="rotate(225 50 50)"/><use href="#r" transform="rotate(270 50 50)"/><use href="#r" transform="rotate(315 50 50)"/></g></svg> Built by Likha Studio</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="top">
+        <button class="menu-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        <div><h1 id="viewTitle">Dashboard</h1><p id="today"></p></div>
+        <div class="who"><span class="av">AD</span><div><b>Admin</b><small>Principal's office</small></div></div>
+      </header>
+
+      <!-- DASHBOARD -->
+      <section class="view on" data-view="dash">
+        <div class="kpis">
+          <div class="kpi"><i class="fa-solid fa-user-check k1"></i><small>Present today</small><b id="kPresent">0</b><span id="kPresentSub"></span></div>
+          <div class="kpi"><i class="fa-solid fa-clock k2"></i><small>Late today</small><b id="kLate">0</b><span>after 8:00 AM</span></div>
+          <div class="kpi"><i class="fa-solid fa-user-xmark k3"></i><small>Not yet in</small><b id="kAbsent">0</b><span>no time-in yet</span></div>
+          <div class="kpi"><i class="fa-solid fa-chart-line k4"></i><small>On-time rate (30 days)</small><b id="kRate">0%</b><span id="kRateSub"></span></div>
+        </div>
+        <div class="grid2">
+          <div class="card">
+            <div class="card-h"><h3>Attendance, last 15 school days</h3><span class="legend"><i class="c-on"></i>On time <i class="c-late"></i>Late <i class="c-abs"></i>Absent</span></div>
+            <div class="bars" id="trend"></div>
+          </div>
+          <div class="card">
+            <div class="card-h"><h3>Today</h3></div>
+            <div class="donut-wrap"><div class="donut" id="donut"><div><b id="donutPct">0%</b><small>present</small></div></div>
+              <ul class="donut-legend" id="donutLegend"></ul></div>
+          </div>
+        </div>
+        <div class="grid2">
+          <div class="card">
+            <div class="card-h"><h3>Live time-ins</h3><button class="link-btn" data-go="kiosk">Open kiosk →</button></div>
+            <ul class="feed" id="feed"></ul>
+          </div>
+          <div class="card">
+            <div class="card-h"><h3>Most lates this month</h3><button class="link-btn" data-go="reports">Full report →</button></div>
+            <ul class="rank" id="rank"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- KIOSK -->
+      <section class="view" data-view="kiosk">
+        <div class="kiosk-wrap">
+          <div class="kiosk">
+            <div class="k-head"><span class="crest"><i class="fa-solid fa-graduation-cap"></i></span><div><b>Sunrise Learning Center</b><small>Teacher attendance</small></div></div>
+            <div class="k-time" id="kTime">--:--</div>
+            <div class="k-date" id="kDate"></div>
+            <div class="k-msg" id="kMsg">Enter your 4-digit PIN</div>
+            <div class="k-dots" id="kDots"><i></i><i></i><i></i><i></i></div>
+            <div class="k-pad" id="kPad"></div>
+          </div>
+          <div class="card pins">
+            <h3><i class="fa-solid fa-key"></i> Demo PINs</h3>
+            <p>Tap a PIN on the keypad. The first tap is <b>time in</b>, the next one is <b>time out</b>. Check the Dashboard after.</p>
+            <ul id="pinList"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECORDS -->
+      <section class="view" data-view="records">
+        <div class="card">
+          <div class="toolbar">
+            <label><span>From</span><input type="date" id="fFrom"></label>
+            <label><span>To</span><input type="date" id="fTo"></label>
+            <label><span>Teacher</span><select id="fWho"><option value="">Everyone</option></select></label>
+            <label><span>Status</span><select id="fStatus"><option value="">All</option><option>On time</option><option>Late</option><option>Absent</option></select></label>
+            <button class="btn" id="exportRecords"><i class="fa-solid fa-file-excel"></i> Export to Excel</button>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>Date</th><th>Teacher</th><th>Department</th><th>Time in</th><th>Time out</th><th>Hours</th><th>Status</th></tr></thead><tbody id="recBody"></tbody></table></div>
+          <p class="count" id="recCount"></p>
+        </div>
+      </section>
+
+      <!-- PEOPLE -->
+      <section class="view" data-view="people">
+        <div class="card">
+          <div class="toolbar">
+            <label class="grow"><span>Search</span><input id="pSearch" placeholder="Name or department…"></label>
+            <button class="btn" id="addPerson"><i class="fa-solid fa-user-plus"></i> Add teacher</button>
+          </div>
+          <div class="people" id="people"></div>
+        </div>
+      </section>
+
+      <!-- REPORTS -->
+      <section class="view" data-view="reports">
+        <div class="card">
+          <div class="toolbar">
+            <label><span>Month</span><select id="rMonth"></select></label>
+            <button class="btn" id="exportReport"><i class="fa-solid fa-file-excel"></i> Export to Excel</button>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>Teacher</th><th>Days present</th><th>Lates</th><th>Absences</th><th>Total hours</th><th>Avg. time in</th><th>On-time rate</th></tr></thead><tbody id="repBody"></tbody></table></div>
+          <p class="count">Hours are computed from each time-in and time-out. Ready to hand to payroll.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="modal" hidden>
+    <form class="modal-box" id="personForm">
+      <h3>Add a teacher</h3>
+      <label>Full name<input name="name" required placeholder="e.g. Ms. Liza Domingo"></label>
+      <label>Department<select name="dept"><option>Preschool</option><option>Primary</option><option>Intermediate</option><option>Junior High</option><option>Admin</option></select></label>
+      <label>4-digit PIN<input name="pin" required pattern="\d{4}" maxlength="4" inputmode="numeric" placeholder="e.g. 4321"></label>
+      <p class="err" id="pinErr"></p>
+      <div class="row"><button type="button" class="ghost-btn" id="cancelPerson">Cancel</button><button class="btn">Save teacher</button></div>
+    </form>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="school.js"></script>
+  <script src="../kapitan-kb.js"></script>
+  <script src="https://garciaralphlawrence-svg.github.io/AI-Analytics-Studio/widget/kapitan.js" data-site="likha" data-api="none" defer></script>
+</body>
+</html>
