@@ -121,6 +121,22 @@ $$('a', links).forEach(a => a.addEventListener('click', () => { links.classList.
   }));
 })();
 
+/* ---------- QR illustration for the hospital case study (decorative) ---------- */
+(() => {
+  const box = $('#qrArt'); if (!box) return;
+  const N = 21; let seed = 7;
+  const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  const finder = (r, c, R, C) => { const y = r - R, x = c - C; if (y < 0 || x < 0 || y > 6 || x > 6) return null; return y === 0 || y === 6 || x === 0 || x === 6 || (y >= 2 && y <= 4 && x >= 2 && x <= 4); };
+  let html = '';
+  for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
+    let on = finder(r, c, 0, 0); if (on === null) on = finder(r, c, 0, 14); if (on === null) on = finder(r, c, 14, 0);
+    const nearFinder = (r < 8 && c < 8) || (r < 8 && c > 12) || (r > 12 && c < 8);
+    if (on === null) on = nearFinder ? false : rnd() > .52;
+    html += `<i${on ? '' : ' class="o"'}></i>`;
+  }
+  box.innerHTML = html;
+})();
+
 /* ---------- FAQ ---------- */
 $('#faqList').innerHTML = FAQ.map(([q, a], i) => `<details class="reveal"${i === 0 ? ' open' : ''}><summary>${esc(q)}</summary><div class="ans">${esc(a)}</div></details>`).join('');
 

@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case.css">
 </head>
 <body>
   <!-- intro -->
@@ -46,7 +47,7 @@
     <div class="wrap nav-inner">
       <a href="#top" class="logo" aria-label="Likha Studio home"><svg class="logo-sun" viewBox="0 0 100 100"><use href="#sunmark"/></svg><span>Likha<em>Studio</em></span></a>
       <nav class="nav-links" id="navLinks">
-        <a href="#work">Work</a><a href="#services">Services</a><a href="#demos">Live demos</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a>
+        <a href="#work">Work</a><a href="#hospital">Case study</a><a href="#services">Services</a><a href="#demos">Live demos</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a>
       </nav>
       <a href="#contact" class="btn btn-sun btn-sm nav-cta">Get a free quote</a>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
@@ -65,8 +66,8 @@
           <p class="eyebrow"><span class="dot"></span>Web · Systems · AI assistants — for PH &amp; US businesses</p>
           <h1 class="hero-title">
             <span class="line"><span>Websites &amp; systems</span></span>
-            <span class="line"><span>that make your</span></span>
-            <span class="line"><span>business look <em class="grad">big.</em></span></span>
+            <span class="line"><span>that help your</span></span>
+            <span class="line"><span>business <em class="grad">grow.</em></span></span>
           </h1>
           <p class="hero-sub">Built for <span class="rotator" id="rotator"><b>schools</b><b>clinics</b><b>performers</b><b>restaurants</b><b>travel agencies</b><b>small businesses</b></span><br>Beautiful sites, smart systems, and <strong>Kapitan</strong>, an AI assistant that answers your customers 24/7.</p>
           <div class="hero-btns">
@@ -104,12 +105,106 @@
         <div class="sec-head reveal">
           <span class="kicker">01 — Selected work</span>
           <h2>Real projects. <em>Live right now.</em></h2>
-          <p>Every project below is online. Open any of them on your phone while we talk.</p>
+          <p>Every project below is online. You can open any of them on your phone right now.</p>
         </div>
         <div class="filters reveal" role="tablist" aria-label="Filter projects">
           <button class="on" data-filter="all">All</button><button data-filter="web">Websites</button><button data-filter="sys">Systems</button><button data-filter="ai">AI &amp; data</button>
         </div>
         <div class="work-grid" id="workGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= HOSPITAL CASE STUDY ================= -->
+    <section class="section case" id="hospital">
+      <div class="wrap">
+        <div class="case-head">
+          <div class="sec-head reveal">
+            <span class="kicker">Featured case study · Healthcare</span>
+            <h2>A hospital's quality office, <em>fully digital.</em></h2>
+            <p>As the in-house developer at UERM Medical Center, I built the Quality Management System its Quality Assurance Office uses every day to meet ISO 9001. It replaced paper forms, shared folders and spreadsheets. Here are three highlights.</p>
+          </div>
+          <div class="case-facts reveal">
+            <div><b>ISO 9001</b><span>quality standard it supports</span></div>
+            <div><b>1 login</b><span>for every hospital employee</span></div>
+            <div><b>Daily use</b><span>across hospital departments</span></div>
+          </div>
+        </div>
+
+        <article class="hl reveal">
+          <div class="hl-media">
+            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>Customer Experience System</span></div><img src="assets/hospital/cx.webp" alt="Customer Experience System sign-in page" loading="lazy" width="1200" height="750"></div>
+            <div class="qr-card" aria-hidden="true">
+              <div class="qr" id="qrArt"></div>
+              <b>Scan to share your experience</b>
+              <div class="qr-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <span class="scan-line"></span>
+            </div>
+          </div>
+          <div class="hl-copy">
+            <span class="hl-num">01</span>
+            <span class="hl-tag"><i class="fa-solid fa-qrcode"></i> Customer Experience</span>
+            <h3>Patients scan a QR code to give feedback</h3>
+            <p>QR codes are posted around the hospital. Patients and visitors scan one with their own phone, rate their experience and leave a comment. They don't need an app or an account.</p>
+            <p>Every concern goes to the right office, gets a named owner, and is tracked step by step until it is resolved.</p>
+            <ul class="hl-wins">
+              <li><i class="fa-solid fa-circle-check"></i>Feedback in under a minute, from any phone</li>
+              <li><i class="fa-solid fa-circle-check"></i>No complaint is lost: each one is tracked to closure</li>
+              <li><i class="fa-solid fa-circle-check"></i>Satisfaction scores and trends update automatically</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="hl flip reveal">
+          <div class="hl-media">
+            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>Knowledge Hub</span></div><img src="assets/hospital/khub.webp" alt="Knowledge Hub landing page" loading="lazy" width="1200" height="750"></div>
+            <div class="doc-stack" aria-hidden="true">
+              <div class="doc"><i class="fa-solid fa-file-pdf"></i><span><b>Infection Control Policy</b><small>v4 · Approved</small></span></div>
+              <div class="doc"><i class="fa-solid fa-file-word"></i><span><b>Patient Admission SOP</b><small>v2 · Approved</small></span></div>
+              <div class="doc"><i class="fa-solid fa-file-excel"></i><span><b>Records Retention Form</b><small>v1 · For review</small></span></div>
+            </div>
+          </div>
+          <div class="hl-copy">
+            <span class="hl-num">02</span>
+            <span class="hl-tag"><i class="fa-solid fa-book"></i> Knowledge Hub (K-Hub)</span>
+            <h3>Every document in one central place</h3>
+            <p>All policies, procedures and forms live in one searchable library, organized by department. Only the latest approved version is shown, and older versions are kept as history.</p>
+            <p>Staff confirm they have read a document, owners get a reminder when it is due for review, and one K-Hub account signs employees in to every other system.</p>
+            <ul class="hl-wins">
+              <li><i class="fa-solid fa-circle-check"></i>Find any document in seconds</li>
+              <li><i class="fa-solid fa-circle-check"></i>Always the current, approved version</li>
+              <li><i class="fa-solid fa-circle-check"></i>See exactly who has read and acknowledged it</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="hl reveal">
+          <div class="hl-media">
+            <div class="frame"><div class="bar"><i></i><i></i><i></i><span>KPI Generator</span></div><img src="assets/hospital/kpi.webp" alt="KPI Generator landing page" loading="lazy" width="1200" height="750"></div>
+            <div class="kpi-card" aria-hidden="true">
+              <div class="kpi-row"><span>Patient wait time</span><em class="ok">Achieved</em></div>
+              <div class="kpi-row"><span>Lab turnaround</span><em class="ok">Achieved</em></div>
+              <div class="kpi-row"><span>Discharge before noon</span><em class="no">Action plan</em></div>
+              <div class="kpi-heat"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="hl-copy">
+            <span class="hl-num">03</span>
+            <span class="hl-tag"><i class="fa-solid fa-chart-column"></i> KPI Generator</span>
+            <h3>Measuring every department's performance</h3>
+            <p>Each department sets its key performance indicators (KPIs) and enters results every month. The system marks each one <b>Achieved</b> or <b>Not achieved</b> automatically.</p>
+            <p>A missed target needs an action plan, which is accepted by the department head and approved by the vice president. Management sees everything on one heatmap.</p>
+            <ul class="hl-wins">
+              <li><i class="fa-solid fa-circle-check"></i>Results are classified automatically, without manual checking</li>
+              <li><i class="fa-solid fa-circle-check"></i>Every missed target has an approved action plan</li>
+              <li><i class="fa-solid fa-circle-check"></i>One view of performance across all departments</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="case-cta reveal">
+          <p><b>The same tools can work for your school, clinic or company:</b> feedback by QR code, a central document library and KPI tracking.</p>
+          <a href="#contact" class="btn btn-sun">Talk about your system <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
       </div>
     </section>
 
@@ -153,8 +248,8 @@
     <section class="section" id="demos">
       <div class="wrap">
         <div class="sec-head reveal">
-          <span class="kicker">03 — Try it yourself</span>
-          <h2>Don't take my word for it. <em>Click around.</em></h2>
+          <span class="kicker">03 — Live demos</span>
+          <h2>See it working. <em>Try the live demos.</em></h2>
         </div>
         <div class="demo-tabs reveal" role="tablist">
           <button class="on" data-tab="kiosk"><i class="fa-solid fa-id-badge"></i> Attendance kiosk</button>

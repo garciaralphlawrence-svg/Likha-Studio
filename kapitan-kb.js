@@ -49,6 +49,18 @@
   add(['portfolio', 'examples', 'sample work', 'previous work', 'projects', 'past projects', 'who are your clients', 'your clients', 'halimbawa', 'mga gawa'],
     'All live right now:\n- [Future Minds Academy](https://futuremindsacademyph.com/) — school site + system\n- [Joseph Gelito](https://garciaralphlawrence-svg.github.io/Comedian-Demo/) — performer site\n- [KMM Travel](https://garciaralphlawrence-svg.github.io/KMM/) · [IslaKeys](https://garciaralphlawrence-svg.github.io/IslaKeys/) · [BizBuddy](https://garciaralphlawrence-svg.github.io/BizBuddy/)\n- [CareSight](https://garciaralphlawrence-svg.github.io/CareSight/) · [AI Analytics Studio](https://garciaralphlawrence-svg.github.io/AI-Analytics-Studio/) · [SPC Studio](https://garciaralphlawrence-svg.github.io/SPC-Studio/)');
 
+  add(['hospital', 'hospital system', 'healthcare', 'medical center', 'uerm', 'quality management system', 'qms', 'iso 9001', 'clinic', 'case study'],
+    'Ralph built the **Quality Management System** used daily by UERM Medical Center\'s Quality Assurance Office (ISO 9001). Highlights:\n- **Customer Experience:** patients scan a QR code to give feedback, and every concern is tracked until resolved\n- **Knowledge Hub (K-Hub):** every policy and form in one searchable place, always the latest version\n- **KPI Generator:** departments enter monthly results and get Achieved / Not achieved automatically\n[See the case study](' + home + '#hospital)');
+
+  add(['qr code', 'qr feedback', 'customer feedback', 'patient feedback', 'satisfaction survey', 'complaints', 'scan qr'],
+    '**QR feedback:** customers scan a QR code with their own phone, rate their experience and leave a comment, with no app or login. Each concern is assigned an owner and tracked to closure, and satisfaction trends update automatically. [See how it works](' + home + '#hospital)');
+
+  add(['document management', 'k-hub', 'khub', 'knowledge hub', 'centralize documents', 'policies', 'sop', 'file storage'],
+    '**Knowledge Hub (K-Hub):** all policies, procedures and forms in one searchable library by department, with version history, read acknowledgements and review reminders. [See it](' + home + '#hospital)');
+
+  add(['kpi', 'performance', 'measure performance', 'kpi dashboard', 'key performance indicators', 'targets'],
+    '**KPI Generator:** each department sets KPIs and enters monthly results; the system marks them Achieved / Not achieved automatically. Missed targets need an approved action plan, and management sees everything on one heatmap. [See it](' + home + '#hospital)');
+
   add(['dashboard', 'excel', 'data analysis', 'analytics', 'reports', 'spreadsheet', 'forecast'],
     'Likha turns Excel files into dashboards, forecasts and plain-English reports. Try [AI Analytics Studio](https://garciaralphlawrence-svg.github.io/AI-Analytics-Studio/) — drop in a spreadsheet and see.');
 
