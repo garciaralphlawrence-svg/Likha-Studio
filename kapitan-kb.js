@@ -22,10 +22,10 @@
   add(['school system', 'attendance system', 'attendance kiosk', 'system for school', 'business system', 'payroll', 'enrollment system', 'records system', 'clinic system', 'may system ba kayo', 'pin attendance'],
     '**Business System — from ₱60,000 / $1,200:** logins for admin, staff and parents; PIN attendance kiosk; records or bookings; dashboards and reports; Excel import & export; staff training + 1 month support. 3–6 weeks.\nTry the [School Suite demo](' + home + 'demo/school.html) — PIN 1234.');
 
-  add(['kapitan', 'chatbot', 'ai assistant', 'what is kapitan', 'chat bot', 'ai chat', 'does kapitan need chatgpt', 'monthly ai fee', 'may bayad ba ang ai'],
+  add(['kapitan', 'chatbot', 'ai assistant', 'what is kapitan', 'chat bot', 'ai chat', 'do i need to pay for ai', 'monthly ai fee', 'may bayad ba ang ai'],
     "I'm **Kapitan** 👋 an assistant that learns a business's prices, schedule, location and contacts, then answers customers instantly in English, Filipino or Taglish — even at 2 AM. No AI subscription needed. Already on an existing site? Kapitan add-on is **₱1,500/mo ($30)**.");
 
-  add(['hosting', 'monthly fee', 'monthly cost', 'may monthly ba', 'hosting fee', 'server cost', 'buwanang bayad'],
+  add(['hosting', 'do i pay monthly', 'monthly payment', 'monthly fee', 'monthly cost', 'may monthly ba', 'hosting fee', 'server cost', 'buwanang bayad'],
     'Most websites run on **free hosting — ₱0 a month**. You only pay for your domain (about ₱900 / $15 a year). Systems with logins and a database may need a small hosting fee, always quoted upfront.');
 
   add(['domain', 'own domain', '.com', 'website name', 'dot com'],
@@ -87,7 +87,7 @@
         url: home,
         greeting: "Hi! I'm Kapitan 👋 Likha Studio's assistant. Ask me about prices, timelines or what we build — English or Taglish!",
         suggestions: ['How much is a website?', 'Magkano ang school system?', 'Do I pay monthly for hosting?', 'How do I contact Ralph?'],
-        aliases: ['likha', 'likha studio', 'ralph']
+        aliases: ['likha', 'likha studio']
       }
     },
     faq: faq,
