@@ -168,28 +168,22 @@ $('#faqList').innerHTML = FAQ.map(([q, a], i) => `<details class="reveal"${i ===
   $('#cDirect').innerHTML = items.map(([href, ic, label, val]) => `<a href="${esc(href)}"${/^https?:/.test(href) ? ' target="_blank" rel="noopener"' : ''}${label === 'Chat assistant' ? ' data-kapitan' : ''}><span class="ci"><i class="${ic}"></i></span><span><small>${label}</small><b>${esc(val)}</b></span></a>`).join('');
   $$('[data-contact="linkedin"]').forEach(a => a.href = CONTACT.linkedin);
 })();
-$('#cForm').addEventListener('submit', async e => {
-  e.preventDefault();
-  const form = e.target, f = new FormData(form), note = $('#cNote'), btn = form.querySelector('button[type="submit"]');
-  if (f.get('_honey')) return; // spam bots fill the hidden field
-  const subject = `Likha Studio inquiry: ${f.get('need')}${f.get('biz') ? ' for ' + f.get('biz') : ''}`;
-  const data = { name: f.get('name'), email: f.get('email'), business: f.get('biz') || '-', need: f.get('need'), message: f.get('msg') || '-', _subject: subject, _template: 'table', _captcha: 'false' };
-  btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
-  try {
-    const res = await fetch('https://formsubmit.co/ajax/' + CONTACT.email, { method: 'POST', referrerPolicy: 'no-referrer-when-downgrade', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
-    const j = await res.json().catch(() => ({}));
-    if (!res.ok || String(j.success) !== 'true') { console.warn('Contact form:', j.message || res.status); throw new Error(j.message || 'send failed'); }
-    form.reset();
-    note.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message was sent. I will reply by email.';
-    note.className = 'c-note ok';
-  } catch (err) {
-    const body = `Hi Ralph,\n\nName: ${data.name}\nEmail: ${data.email}\nBusiness: ${data.business}\nI need: ${data.need}\n\n${data.message}\n`;
-    note.innerHTML = 'Could not send automatically. <a href="mailto:' + CONTACT.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body) + '">Click here to send it by email instead.</a>';
-    note.className = 'c-note warn';
-  } finally {
-    btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send my request';
-  }
+// Contact form: a normal form post to FormSubmit (no API key). It sends the message to my inbox,
+// then FormSubmit sends the visitor back here with ?sent=1, where we show a thank-you note.
+$('#cForm').addEventListener('submit', e => {
+  const form = e.target, f = new FormData(form), btn = form.querySelector('button[type="submit"]');
+  if (f.get('_honey')) { e.preventDefault(); return; } // spam bots fill the hidden field
+  $('#cSubject').value = `Likha Studio inquiry: ${f.get('need')}${f.get('biz') ? ' for ' + f.get('biz') : ''}`;
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+  btn.style.pointerEvents = 'none';
 });
+if (new URLSearchParams(location.search).has('sent')) {
+  const note = $('#cNote');
+  note.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message was sent. I will reply by email.';
+  note.className = 'c-note ok';
+  history.replaceState(null, '', location.pathname + '#contact');
+  setTimeout(() => $('#contact').scrollIntoView(), 300);
+}
 
 /* open Kapitan from any [data-kapitan] button */
 document.addEventListener('click', e => {
