@@ -78,9 +78,9 @@ $$('a', links).forEach(a => a.addEventListener('click', () => { links.classList.
   words[0].classList.add('on');
   if (reduce || still) return;
   setInterval(() => {
-    const prev = words[i]; prev.classList.replace('on', 'off'); setTimeout(() => prev.classList.remove('off'), 500);
+    const prev = words[i]; prev.classList.replace('on', 'off'); setTimeout(() => prev.classList.remove('off'), 700);
     i = (i + 1) % words.length; words[i].classList.add('on');
-  }, 2400);
+  }, 2700);
 })();
 
 /* count-up numbers */
@@ -89,7 +89,36 @@ function countTo(el, end) {
   const t0 = performance.now();
   (function step(t) { const k = Math.min(1, (t - t0) / 1200); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); })(t0);
 }
-setTimeout(() => $$('.proof b[data-count]').forEach(b => countTo(b, +b.dataset.count)), 400);
+setTimeout(() => $$('.proof b[data-count]').forEach(b => countTo(b, +b.dataset.count)), still || reduce ? 0 : 2300);
+
+/* drifting gold dust in the hero (pauses when the hero is off-screen) */
+(() => {
+  const cv = $('#dust');
+  if (!cv || reduce || still) return;
+  const ctx = cv.getContext('2d');
+  let W, H, dpr, motes = [], visible = true, raf;
+  function size() {
+    dpr = Math.min(2, devicePixelRatio || 1);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.round(Math.min(70, W * H / 16000));
+    motes = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, r: .5 + Math.random() * 1.8, s: .12 + Math.random() * .35, d: Math.random() * Math.PI * 2, a: .25 + Math.random() * .6 }));
+  }
+  function frame(t) {
+    ctx.clearRect(0, 0, W, H);
+    for (const m of motes) {
+      m.y -= m.s; m.x += Math.sin(t / 2600 + m.d) * .25;
+      if (m.y < -6) { m.y = H + 6; m.x = Math.random() * W; }
+      const tw = .55 + .45 * Math.sin(t / 700 + m.d * 3);
+      const g = ctx.createRadialGradient(m.x, m.y, 0, m.x, m.y, m.r * 4);
+      g.addColorStop(0, `rgba(246,227,184,${m.a * tw})`); g.addColorStop(1, 'rgba(232,199,138,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(m.x, m.y, m.r * 4, 0, Math.PI * 2); ctx.fill();
+    }
+    if (visible) raf = requestAnimationFrame(frame);
+  }
+  size(); addEventListener('resize', size);
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; cancelAnimationFrame(raf); if (visible) raf = requestAnimationFrame(frame); }).observe(cv);
+})();
 
 /* tools */
 $('#toolsGrid').innerHTML = TOOLS.map((t, i) => `
@@ -171,11 +200,12 @@ const secIO = new IntersectionObserver(entries => entries.forEach(en => {
 $$('main section[id]').forEach(s => secIO.observe(s));
 
 /* scroll: nav shadow, progress bar, process line */
-const steps = $('#steps');
+const steps = $('#steps'), flowEl = $('.flow'), heroCopy = $('.hero-copy');
 let ticking = false;
 function onScroll() {
   nav.classList.toggle('scrolled', scrollY > 10);
   $('#progress').style.transform = `scaleX(${Math.min(1, scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight))})`;
+  if (!reduce && scrollY < innerHeight) { flowEl.style.translate = '0 ' + (scrollY * -0.08).toFixed(1) + 'px'; heroCopy.style.translate = '0 ' + (scrollY * 0.06).toFixed(1) + 'px'; }
   const r = steps.getBoundingClientRect();
   steps.style.setProperty('--p', Math.max(0, Math.min(1, (innerHeight * .8 - r.top) / (r.height + innerHeight * .3))).toFixed(3));
   ticking = false;
