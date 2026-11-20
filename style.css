@@ -421,3 +421,9 @@ h1, h2, h3, .proof b, .steps span, .logo, .intro-mark { font-variant-numeric: li
 .sys-intro { color: var(--text-2); max-width: 760px; margin: 0 0 22px; }
 .sys-intro b { color: var(--gold-2); font-weight: 600; }
 .sys-panel[hidden] { display: none; }
+
+.moment { --m-accent-rgb: 232, 199, 138; }
+.moment-row { margin-top: 80px; }
+.moment-cap h3 { font-family: inherit; }
+.moment-cap p { color: var(--muted, inherit); }
+.moment-cap h3 em { font-style: italic; color: var(--gold); }
