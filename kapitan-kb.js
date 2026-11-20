@@ -31,7 +31,7 @@
     '**Websites & web apps:** business and personal websites, event and ticket pages, booking and reservation forms, online menus and catalogs, and client or student portals. All mobile-friendly, on your own domain.');
 
   add(['school system', 'attendance system', 'attendance kiosk', 'system for school', 'business system', 'enrollment system', 'records system', 'clinic system', 'may system ba kayo', 'pin attendance', 'inventory'],
-    '**Business systems:** attendance with a PIN kiosk, document management, KPI tracking, QR customer feedback, and records, inventory or requests. Try the [School Suite demo](' + home + 'demo/school.html) — PIN 1234.');
+    '**Business systems:** attendance with a PIN kiosk, document management, KPI tracking, QR customer feedback, and records, inventory or requests. Try the [School Suite demo](' + home + 'demo/school.html) — PIN 1234. A real school, **Future Minds Academy**, uses Ralph’s system every day: website, one login for every role, and a teacher attendance kiosk. [See it](' + home + '#school)');
 
   add(['dashboard', 'excel', 'data analysis', 'analytics', 'reports', 'spreadsheet', 'forecast', 'prediction', 'charts'],
     '**Dashboards & data:** sales, school and KPI dashboards, forecasting, survey analysis and quality charts. Try [AI Analytics Studio](' + G + 'AI-Analytics-Studio/) — upload an Excel file and see.');

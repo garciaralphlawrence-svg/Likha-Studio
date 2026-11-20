@@ -220,3 +220,15 @@ function onScroll() {
 }
 addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
 onScroll();
+
+/* real systems tabs (school / hospital); #school or #hospital links open the right tab */
+(() => {
+  const tabs = document.querySelectorAll('.sys-tabs button');
+  const show = (id) => {
+    tabs.forEach(t => { const on = t.dataset.tab === id; t.classList.toggle('on', on); t.setAttribute('aria-selected', on); });
+    document.querySelectorAll('.sys-panel').forEach(p => { p.hidden = p.id !== id; if (!p.hidden) p.querySelectorAll('.reveal').forEach(r => r.classList.add('in')); });
+  };
+  tabs.forEach(t => t.addEventListener('click', () => show(t.dataset.tab)));
+  const fromHash = () => { const h = location.hash.slice(1); if (h === 'school' || h === 'hospital') { show(h); document.getElementById('systems').scrollIntoView(); } };
+  addEventListener('hashchange', fromHash); fromHash();
+})();

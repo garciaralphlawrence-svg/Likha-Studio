@@ -412,3 +412,12 @@ h1, h2, h3, .proof b, .steps span, .logo, .intro-mark { font-variant-numeric: li
 .about-photo.grad img { height: 100%; aspect-ratio: auto; object-fit: contain; object-position: 50% 100%; filter: drop-shadow(0 20px 30px rgba(0,0,0,.6)); }
 @media (max-width: 900px) { .about:has(.grad) { grid-template-columns: 1fr; } .about-photo.grad { max-width: 320px; width: 100%; justify-self: center; } }
 .demo.surplus video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #2b2d31; }
+
+/* real systems tabs */
+.sys-tabs { margin: 0 0 26px; align-items: center; }
+.sys-tabs button i, .tab-link i { margin-right: 6px; }
+.tab-link { padding: 8px 18px; border-radius: 999px; border: 1px dashed var(--line-2); color: var(--text-2); font-size: .84rem; text-decoration: none; transition: all .3s; }
+.tab-link:hover { border-color: var(--gold); color: var(--gold-2); }
+.sys-intro { color: var(--text-2); max-width: 760px; margin: 0 0 22px; }
+.sys-intro b { color: var(--gold-2); font-weight: 600; }
+.sys-panel[hidden] { display: none; }
