@@ -64,7 +64,7 @@
     'Ralph stays with you after launch: content and event updates, new features, and training for your staff.');
 
   add(['portfolio', 'examples', 'sample work', 'previous work', 'projects', 'past projects', 'who are your clients', 'your clients', 'halimbawa', 'mga gawa'],
-    'See Ralph\'s work:\n- [Ralph Garcia Portfolio](' + G + 'Ralph-Portfolio/)\n- [Future Minds Academy](https://futuremindsacademyph.com/) — school site + system\n- [CareSight](' + G + 'CareSight/) · [AI Analytics Studio](' + G + 'AI-Analytics-Studio/) · [SPC Studio](' + G + 'SPC-Studio/)\n- [IslaKeys](' + G + 'IslaKeys/) · [BizBuddy](' + G + 'BizBuddy/) · [KMM Travel](' + G + 'KMM/)\n[All projects](' + home + '#work)');
+    'See Ralph\'s work:\n- [Ralph Garcia Portfolio](' + G + 'Ralph-Portfolio/)\n- [Future Minds Academy](https://futuremindsacademyph.com/) — school site + system\n- [CareSight](' + G + 'CareSight/) · [AI Analytics Studio](' + G + 'AI-Analytics-Studio/) · [SPC Studio](' + G + 'SPC-Studio/)\n- [IslaKeys](' + G + 'IslaKeys/) · [BizBuddy](' + G + 'BizBuddy/) · [KMM Travel](' + G + 'KMM/) · [Drs’. Drip](' + G + 'DrsDrip-Demo/) — clinic booking\n[All projects](' + home + '#work)');
 
   add(['hospital', 'hospital system', 'healthcare', 'medical center', 'quality management system', 'qms', 'iso 9001', 'case study'],
     'Ralph built the **Quality Management System** used daily by a Manila medical center\'s Quality Assurance Office (ISO 9001). Highlights:\n- **Customer Experience:** patients scan a QR code to give feedback\n- **Knowledge Hub (K-Hub):** every document in one searchable place\n- **KPI Generator:** monthly results marked Achieved / Not achieved automatically\n[See it](' + home + '#hospital)');

@@ -31,6 +31,8 @@ const WORK = [
     desc: 'My developer portfolio: projects, research, talks and experience.' },
   { id: 'fma', cat: 'sys web', client: true, type: 'School system', name: 'Future Minds Academy', url: 'https://futuremindsacademyph.com/',
     desc: 'School website plus a management system with logins for every role and a PIN attendance kiosk.' },
+  { id: 'drsdrip', cat: 'sys web', type: 'Clinic website · Concept', name: "Drs'. Drip Lounge", url: G + 'DrsDrip-Demo/',
+    desc: 'Concept site for an IV drip clinic: online booking with a schedule picker, branch hours and a chat assistant.' },
   { id: 'caresight', cat: 'ai', type: 'Hospital analytics', name: 'CareSight', url: G + 'CareSight/',
     desc: 'Predicts patient readmissions and missed appointments, and forecasts hospital admissions.' },
   { id: 'studio', cat: 'ai', type: 'Excel → dashboard', name: 'AI Analytics Studio', url: G + 'AI-Analytics-Studio/',
