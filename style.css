@@ -273,6 +273,21 @@ h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .84rem; color: var(--muted); }
 
 /* ---------- responsive ---------- */
+/* floating FUSE speaker card (hero) */
+.speak { position: relative; margin: 0; justify-self: center; width: 100%; max-width: 560px; opacity: 0; animation: lux 1s var(--ease) 2.05s forwards; }
+.speak-frame { position: relative; border-radius: 22px; padding: 8px; background: linear-gradient(160deg, rgba(58,13,24,.85), rgba(29,7,15,.7)); border: 1px solid var(--line-2); box-shadow: var(--shadow), 0 40px 80px -40px rgba(164,22,43,.8); animation: floaty 6s ease-in-out 3s infinite; }
+.speak-frame::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; background: conic-gradient(from var(--a, 0deg), transparent 0 70%, var(--gold) 80%, transparent 90%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: orbit 6s linear infinite; pointer-events: none; }
+.speak-frame img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 15px; }
+.speak-live { position: absolute; top: 20px; left: 20px; display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-size: .72rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: #2a0b14; background: var(--gold-grad); box-shadow: 0 8px 20px -8px rgba(0,0,0,.6); }
+.speak-cap { position: relative; margin: -34px 0 0 28px; max-width: 78%; padding: 14px 18px; border-radius: 16px; background: rgba(29,7,15,.88); border: 1px solid var(--line-2); backdrop-filter: blur(10px); box-shadow: var(--shadow); animation: floaty 6s ease-in-out 3.6s infinite; }
+.speak-cap b { display: block; font-family: var(--head); font-size: 1.05rem; font-weight: 600; color: var(--gold-2); }
+.speak-cap small { display: block; margin-top: 3px; color: var(--muted); font-size: .8rem; line-height: 1.45; }
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.flow-wrap { display: flex; justify-content: center; margin: 0 auto 48px; }
+.flow-wrap .flow { width: 100%; max-width: 560px; animation-delay: 0s; }
+@media (max-width: 640px) { .speak-cap { margin: -24px 0 0 14px; max-width: 88%; padding: 12px 14px; } .speak-live { top: 14px; left: 14px; } }
+@media (prefers-reduced-motion: reduce) { .speak-frame, .speak-cap { animation: none; } }
+
 @media (max-width: 1024px) {
   .svc-grid, .tools-grid, .work-grid, .hl-grid { grid-template-columns: 1fr 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
@@ -287,7 +302,7 @@ h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); }
   .nav-cta { display: none; }
   .hero-grid, .contact-grid, .about { grid-template-columns: 1fr; }
   .hero-grid { gap: 40px; }
-  .flow { max-width: 520px; width: 100%; justify-self: center; }
+  .flow, .speak { max-width: 520px; width: 100%; justify-self: center; }
   .about-photo { max-width: 300px; }
 }
 @media (max-width: 640px) {

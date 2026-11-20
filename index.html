@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=202611191531">
+  <link rel="stylesheet" href="style.css?v=202611201200">
 </head>
 <body>
   <div class="intro" aria-hidden="true"><div class="intro-mark"><img src="assets/logo.svg" alt="" width="54" height="54"><span>Likha <em>Studio</em></span></div><i class="intro-line"></i></div>
@@ -53,25 +53,17 @@
           </ul>
         </div>
 
-        <!-- animated automation flow: input → automation → results -->
-        <div class="flow" aria-label="Example: a spreadsheet becomes a dashboard, receipts and an email report automatically">
-          <div class="flow-card in-card">
-            <i class="fa-solid fa-file-excel"></i>
-            <div><b>sales-november.xlsx</b><small>2,418 rows · messy data</small></div>
+        <!-- floating speaker card: FUSE talk -->
+        <figure class="speak" aria-label="Ralph Garcia speaking at FUSE">
+          <div class="speak-frame">
+            <img src="assets/ralph-speaking.webp" alt="Ralph Garcia speaking as an invited speaker at FUSE" width="1600" height="898" fetchpriority="high">
+            <span class="speak-live"><i class="fa-solid fa-microphone-lines"></i> On stage</span>
           </div>
-          <div class="flow-line" aria-hidden="true"><span></span></div>
-          <div class="flow-core">
-            <img src="assets/logo.svg" alt="" width="34" height="34">
-            <div><b>Automation</b><small>cleans, computes and sends</small></div>
-            <div class="spinner" aria-hidden="true"></div>
-          </div>
-          <div class="flow-line split" aria-hidden="true"><span></span><span></span><span></span></div>
-          <div class="flow-out">
-            <div class="flow-card o1"><i class="fa-solid fa-chart-column"></i><div><b>Dashboard</b><small>updated live</small></div></div>
-            <div class="flow-card o2"><i class="fa-solid fa-receipt"></i><div><b>Receipts</b><small>VAT computed</small></div></div>
-            <div class="flow-card o3"><i class="fa-solid fa-envelope-open-text"></i><div><b>Email report</b><small>sent every Monday</small></div></div>
-          </div>
-        </div>
+          <figcaption class="speak-cap">
+            <b>Invited speaker · FUSE</b>
+            <small>“The Human Behind the Machine”: how people and AI work together</small>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -87,6 +79,27 @@
           <span class="kicker">Services</span>
           <h2>Everything I can <em>build</em> for you</h2>
           <p>If your team does it by hand every week, it can probably be automated. Here is what I offer.</p>
+        </div>
+        <div class="flow-wrap reveal">
+          <!-- animated automation flow: input → automation → results -->
+          <div class="flow" aria-label="Example: a spreadsheet becomes a dashboard, receipts and an email report automatically">
+            <div class="flow-card in-card">
+              <i class="fa-solid fa-file-excel"></i>
+              <div><b>sales-november.xlsx</b><small>2,418 rows · messy data</small></div>
+            </div>
+            <div class="flow-line" aria-hidden="true"><span></span></div>
+            <div class="flow-core">
+              <img src="assets/logo.svg" alt="" width="34" height="34">
+              <div><b>Automation</b><small>cleans, computes and sends</small></div>
+              <div class="spinner" aria-hidden="true"></div>
+            </div>
+            <div class="flow-line split" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="flow-out">
+              <div class="flow-card o1"><i class="fa-solid fa-chart-column"></i><div><b>Dashboard</b><small>updated live</small></div></div>
+              <div class="flow-card o2"><i class="fa-solid fa-receipt"></i><div><b>Receipts</b><small>VAT computed</small></div></div>
+              <div class="flow-card o3"><i class="fa-solid fa-envelope-open-text"></i><div><b>Email report</b><small>sent every Monday</small></div></div>
+            </div>
+          </div>
         </div>
         <div class="svc-grid">
           <article class="svc reveal">
@@ -310,8 +323,8 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202611191531"></script>
-  <script src="kapitan-kb.js?v=202611191531"></script>
+  <script src="script.js?v=202611201200"></script>
+  <script src="kapitan-kb.js?v=202611201200"></script>
   <script src="https://garciaralphlawrence-svg.github.io/AI-Analytics-Studio/widget/kapitan.js" data-site="likha" data-api="none" defer></script>
 </body>
 </html>

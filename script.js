@@ -208,7 +208,7 @@ const secIO = new IntersectionObserver(entries => entries.forEach(en => {
 $$('main section[id]').forEach(s => secIO.observe(s));
 
 /* scroll: nav shadow, progress bar, process line */
-const steps = $('#steps'), flowEl = $('.flow'), heroCopy = $('.hero-copy');
+const steps = $('#steps'), flowEl = $('.speak'), heroCopy = $('.hero-copy');
 let ticking = false;
 function onScroll() {
   nav.classList.toggle('scrolled', scrollY > 10);
