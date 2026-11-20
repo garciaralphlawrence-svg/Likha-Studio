@@ -411,3 +411,4 @@ h1, h2, h3, .proof b, .steps span, .logo, .intro-mark { font-variant-numeric: li
 .about-photo.grad { aspect-ratio: 4 / 5; background: radial-gradient(circle at 50% 35%, rgba(232,199,138,.22), transparent 60%), linear-gradient(160deg, var(--bg-3), var(--bg-deep)); }
 .about-photo.grad img { height: 100%; aspect-ratio: auto; object-fit: contain; object-position: 50% 100%; filter: drop-shadow(0 20px 30px rgba(0,0,0,.6)); }
 @media (max-width: 900px) { .about:has(.grad) { grid-template-columns: 1fr; } .about-photo.grad { max-width: 320px; width: 100%; justify-self: center; } }
+.demo.surplus video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #2b2d31; }
