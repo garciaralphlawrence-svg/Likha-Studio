@@ -10,7 +10,7 @@
 
   // first entry = overview
   add(['what is likha studio', 'who are you', 'about likha', 'what do you do', 'ano ang likha', 'ano ginagawa nyo', 'services', 'what services do you offer', 'anong serbisyo', 'what can you build'],
-    '**Likha Studio** builds:\n- **Websites & web apps** (business sites, event pages, booking forms, portals)\n- **Business systems** (attendance, documents, KPIs, QR feedback)\n- **Work automation** (Excel, receipts, email reports, bulk PDFs)\n- **Dashboards & data** (reports, forecasting)\n- **Chat assistants (chatbots)** with your own name and branding\n[See all services](' + home + '#services)');
+    '**Likha Studio** builds:\n- **Websites & web apps** (business sites, event pages, booking forms, portals)\n- **Business systems** (attendance, documents, KPIs, QR feedback)\n- **Work automation** (Excel, receipts, email reports, bulk PDFs)\n- **Dashboards & data** (reports, forecasting)\n- **Chat assistants (chatbots)** with your own name and branding\n- **Quality, ISO & data privacy** (ISO 9001/21001, audits, risk register, Privacy Impact Assessment)\n- **Research & analytics** (surveys, thesis data, statistics, predictions)\n- **Retail & operations** (inventory, POS, catalogs, orders)\n- **Support, training & talks on AI**\n[See all services](' + home + '#services)');
 
   add(['how much', 'price', 'pricing', 'magkano', 'magkano website', 'how much is a website', 'cost', 'rates', 'packages', 'presyo', 'quotation', 'quote', 'budget'],
     'Every project is quoted based on what you need, and the quote is **free**. Tell Ralph what you want to build in the [contact form](' + home + '#contact) or email **' + EMAIL + '**.');
@@ -104,6 +104,18 @@
 
   add(['secure', 'security', 'safe', 'hack', 'is it safe', 'privacy', 'data privacy'],
     'Security is built in: sites run on HTTPS, no secret keys are ever put in the website code, logins use hashed passwords, and your data stays yours.');
+
+  add(['iso', 'iso 21001', 'audit', 'internal audit', 'risk register', 'accreditation', 'audit ready', 'compliance', 'privacy impact assessment', 'pia', 'data privacy act', 'npc'],
+    'Yes. Likha Studio builds **quality and compliance tools**: ISO 9001 and ISO 21001 quality systems, risk registers, internal audit tools, document control, and **Privacy Impact Assessments** for the Data Privacy Act. Ralph built these for a medical center. [See the hospital system](' + home + '#hospital)');
+
+  add(['research', 'thesis', 'statistics', 'statistical analysis', 'survey analysis', 'research data', 'spss', 'regression', 'hypothesis', 'capstone', 'thesis help', 'help with my thesis', 'can you help with my thesis', 'thesis statistics', 'do you help with thesis', 'thesis data', 'tulong sa thesis', 'pagawa ng thesis'],
+    'Yes. Ralph is a **BS Data Science (Cum Laude)** graduate and does **research and analytics**: survey design and analysis, thesis and research data analysis, statistical tests, and predictive analytics, explained in plain words.');
+
+  add(['retail', 'store', 'shop', 'pos', 'point of sale', 'stock', 'inventory system', 'furniture', 'orders', 'delivery', 'online catalog', 'surplus'],
+    'Yes. Likha Studio builds **retail and operations tools**: inventory and stock tracking, POS and daily sales records, online product catalogs, and order and delivery tracking. Ralph also runs the operations of **The Surplus Family**, an imported furniture business in Mandaluyong. [See it](' + home + '#surplus)');
+
+  add(['training', 'seminar', 'workshop', 'ai talk', 'speaker for event', 'resource speaker', 'teach ai', 'ai training', 'seminar about ai', 'ai seminar', 'mag seminar', 'pwede ba kayo mag seminar', 'training for teachers', 'teachers training on ai', 'ai workshop', 'talk about ai', 'speaker about ai', 'invite as speaker'],
+    'Yes. Ralph gives **talks and training on AI** for schools and companies, and trains your staff on any system Likha Studio builds. Ralph was an invited speaker at FUSE with the talk "The Human Behind the Machine".');
 
   window.KAPITAN_KB = {
     v: 2,
